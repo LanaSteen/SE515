@@ -4,12 +4,99 @@
 	{
 		static void Main(string[] args)
 		{
+			/*
+			Console.WriteLine("Hello, World!");  // console.log()
 
-			Console.WriteLine("Hello, World!");
+
+			Console.WriteLine("hi");   // ""   
+			*/
+
+			//userName
+			// PrintUserName
 
 
-			Console.WriteLine("hello");
 
+
+			//Console.WriteLine("Enter your name" /*+ " hELLO"*/);
+
+
+
+
+
+
+			//#region logs
+
+
+			//Console.WriteLine();
+			//Console.WriteLine();
+			//Console.WriteLine();
+
+			//Console.WriteLine();
+			//Console.WriteLine();
+
+			//Console.WriteLine();
+
+
+
+
+			//#endregion
+
+
+
+
+
+
+
+			Console.WriteLine("Enter your name");  //  console.log()
+
+			//Console.ReadLine();   // prompt()  // "50"
+
+
+			string userName = Console.ReadLine();
+
+
+			Console.WriteLine("Hello " + userName);
+
+
+			Console.WriteLine("enter your age");
+
+
+
+
+			//"a"  'a' 
+
+			char opperator = 'A';
+
+			bool isValid = true;  //false
+
+
+			//byte age = 1;
+			sbyte age = -1;   //255
+
+			//rgb(255,255,255);
+			//rgb(0, 0, 0);
+
+			//let const var
+
+
+			//500   // int  default
+
+
+
+			//5.5  //double  default
+
+
+			//float sallary = 5000.6f; 
+			//double sallary2 = 5000.6;
+			//decimal sallary3 = 5000.6m;   
+
+
+
+			//Char  x = 'a';
+			//char y = 'b';
+
+			//int z = 10;
+			//Int32 xx = 10;
 
 
 
@@ -18,3 +105,8 @@
 	}
 }
 
+//es6 
+//OOP
+
+
+//ფუნქცია   მეთოდი
