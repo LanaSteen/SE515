@@ -4,4 +4,5 @@
   <Project Path="Lecture3/Lecture3.csproj" Id="b61180a5-cc9a-400b-817c-a8b291bada35" />
   <Project Path="Lecture4/Lecture4.csproj" Id="07e5b395-ddb3-44bf-bbc6-3ee4fa18ca79" />
   <Project Path="Lecture5/Lecture5.csproj" Id="cafc8fb7-7ff4-45f0-bcab-38518802d246" />
+  <Project Path="Lecture6/Lecture6.csproj" Id="407a7695-804d-45c8-a155-73c9d8b9d205" />
 </Solution>
