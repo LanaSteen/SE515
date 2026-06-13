@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Lecture6
 {
@@ -82,38 +83,38 @@ namespace Lecture6
 			//			targetSum = 7
 			//შედეგად უნდა მივიღოთ: resultArray = [[1, 6], [8, -1], [-4, 11]]
 
-			int[] nums = [3, 5, -4, 8, 11, 1, -1, 6];
-			int count = 0;
-			bool isvalid = int.TryParse(Console.ReadLine(), out int targetSum);
+			//int[] nums = [3, 5, -4, 8, 11, 1, -1, 6];
+			//int count = 0;
+			//bool isvalid = int.TryParse(Console.ReadLine(), out int targetSum);
 
-			for (int i = 0; i < nums.Length; i++)  //3
-			{
-				for (int j = i+1; j < nums.Length; j++)
-				{
-					if(nums[j]+nums[i]== targetSum)
-					{
-						count++;
-					}
-				}
-			}
+			//for (int i = 0; i < nums.Length; i++)  //3
+			//{
+			//	for (int j = i+1; j < nums.Length; j++)
+			//	{
+			//		if(nums[j]+nums[i]== targetSum)
+			//		{
+			//			count++;
+			//		}
+			//	}
+			//}
 
-			int[][] resultArray = new int[count][];
+			//int[][] resultArray = new int[count][];
 
-			int index = 0;
+			//int index = 0;
 
-			for (int i = 0; i < nums.Length; i++)  //3
-			{
-				for (int j = i + 1; j < nums.Length; j++)
-				{
-					if (nums[j] + nums[i] == targetSum)
-					{
-						
+			//for (int i = 0; i < nums.Length; i++)  //3
+			//{
+			//	for (int j = i + 1; j < nums.Length; j++)
+			//	{
+			//		if (nums[j] + nums[i] == targetSum)
+			//		{
 
-						resultArray[index] = [nums[i], nums[j]];
-						index++;
-					}
-				}
-			}
+
+			//			resultArray[index] = [nums[i], nums[j]];
+			//			index++;
+			//		}
+			//	}
+			//}
 
 
 
@@ -154,6 +155,91 @@ namespace Lecture6
 			//	};
 
 
+
+
+
+
+			//მაღაზიაში მოვიდა კონტეინერი მასში არის 
+			//	სხვა და სხვა ფასის სხვა და სხვა ყუთები 
+
+			//ცალკე ყუთების ჯამური ღირებულება 
+			//	მთლიანი კონტეინერის ღირებულება
+
+
+
+			//int[][] container =
+			//	[
+			//	   [20,60,70],
+			//	   [80,50,10],
+			//	   [15,30,90]
+
+			//	];
+
+			//int[] sums = new int[container.Length];
+
+			//int totalSum = 0;
+
+			//for (int i = 0; i < container.Length; i++)
+			//{
+
+			//	int boxSum = 0;
+
+			//	for (int j = 0; j < container[i].Length; j++)
+			//	{
+
+			//		totalSum += container[i][j];
+			//		boxSum += container[i][j];
+
+			//	}
+			//	sums[i] = boxSum;
+			//	Console.WriteLine($"{i+1} box sum is {boxSum}");
+
+			//}
+
+
+			//Console.WriteLine($"total sum is {totalSum}");
+
+
+
+			//int min = sums[0];
+			//for (int i = 0; i < sums.Length; i++)
+			//{
+			//	if (sums[i] < min)
+			//	{
+			//		min = sums[i];
+			//	}
+			//}
+
+			//Console.WriteLine(min*0.8);
+
+
+
+
+			string x = "dffd";
+			Console.WriteLine(x[0]);
+
+			x = "hello";
+
+
+
+
+			string rame = "dsfd";
+
+			StringBuilder sb = new StringBuilder(rame);
+
+			Console.WriteLine(sb);
+
+			sb.Append("hello");
+			sb.Append(" world");
+			Console.WriteLine(sb);
+			sb.AppendLine("hello2");
+
+
+			sb.Replace("hello", "hi");
+
+
+			string test = "dsfdf";
+			
 
 
 			#endregion
