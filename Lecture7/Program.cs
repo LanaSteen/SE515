@@ -338,6 +338,14 @@
 			///  
 
 			// S R P    - single responcibility principle
+			//DRY 
+
+			Random rand2 = new();
+			rand2.Next();
+
+			
+
+
 		}
 
 
