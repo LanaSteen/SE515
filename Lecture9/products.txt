@@ -1,0 +1,10 @@
+Laptop,Dell XPS 13,2023,1200,Silver
+Smartphone,iPhone 15,2024,999,Black
+Tablet,Samsung Galaxy Tab S9,2023,850,Gray
+Headphones,Sony WH-1000XM5,2022,399,Black
+Monitor,LG UltraGear 27,2023,450,White
+Keyboard,Keychron K8,2022,89,Black
+Mouse,Logitech MX Master 3S,2023,99,Graphite
+Smartwatch,Apple Watch Series 10,2024,429,Silver
+Camera,Canon EOS R50,2023,799,White
+Speaker,JBL Charge 5,2022,179,Blue

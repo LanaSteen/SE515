@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="Lecture1/Lecture1.csproj" />
+  <Project Path="Lecture10/Lecture10.csproj" Id="b9ad4f06-c4e0-4024-b5c6-c61bac239929" />
   <Project Path="Lecture2/Lecture2.csproj" Id="0f7fad9c-34ba-4f36-9045-ec85101d1250" />
   <Project Path="Lecture3/Lecture3.csproj" Id="b61180a5-cc9a-400b-817c-a8b291bada35" />
   <Project Path="Lecture4/Lecture4.csproj" Id="07e5b395-ddb3-44bf-bbc6-3ee4fa18ca79" />
@@ -7,4 +8,5 @@
   <Project Path="Lecture6/Lecture6.csproj" Id="407a7695-804d-45c8-a155-73c9d8b9d205" />
   <Project Path="Lecture7/Lecture7.csproj" Id="35adbfa7-2d56-402d-a54d-870e9ff907ec" />
   <Project Path="Lecture8/Lecture8.csproj" Id="7715f830-9d3b-4f2b-afa3-56f180b17b8e" />
+  <Project Path="Lecture9/Lecture9.csproj" Id="24654752-08e5-4673-ba6a-bd56549f7509" />
 </Solution>
