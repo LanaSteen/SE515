@@ -8,5 +8,11 @@ namespace Lecture11.Interfaces
 	{
 
 		public void Move(int x, int y);
+
+
+		public void Move(float x, float y)
+		{
+			Console.WriteLine("IMovable.Move(float x, float y)");
+		}
 	}
 }

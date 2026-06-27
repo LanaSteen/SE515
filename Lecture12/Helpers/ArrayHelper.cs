@@ -1,0 +1,62 @@
+﻿using Lecture12.Models;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Lecture12.Helpers
+{
+
+	//generic   - ზოგადი
+
+
+	internal class ArrayHelper
+	{
+
+		//public static void PrintArray(int[] ints) 
+		//{
+
+		//	foreach (var item in ints)
+		//	{
+		//		Console.WriteLine(item);
+		//	}
+
+		//}
+
+		//public static void PrintArray(string[] ints)
+		//{
+
+		//	foreach (var item in ints)
+		//	{
+		//		Console.WriteLine(item);
+		//	}
+
+		//}
+
+
+		//public static void PrintArray(Student[] ints)
+		//{
+
+		//	foreach (var item in ints)
+		//	{
+		//		Console.WriteLine(item);
+		//	}
+
+		//}
+
+
+		public static void PrintArray<T>(T[] collection)
+		{
+
+			foreach (var item in collection)
+			{
+				Console.WriteLine(item);
+			}
+
+		}
+
+
+	}
+}
+
+
+//overload
