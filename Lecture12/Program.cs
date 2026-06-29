@@ -28,7 +28,7 @@ namespace Lecture12
 			ArrayHelper.PrintArray<int>(arr);
 			ArrayHelper.PrintArray<string>(arrStr);
 
-			ArrayHelper.PrintArray(arr);
+			ArrayHelper.PrintArray<int>(arr);
 			ArrayHelper.PrintArray(arrStr);
 			ArrayHelper.PrintArray(students); // 
 
@@ -59,7 +59,21 @@ namespace Lecture12
 
 
 
+			ArrayHelper.PrintArray(students);
+
+
 
 		}
 	}
 }
+
+
+
+//ToString - object  ის მეთდიაა და ნებისმიერ კლასს შუძლია ოვერრაიდი გაუკეთოს
+//static - კლასიდან გამოიძახება - ობიექტის შექმნა არ სჭირდება
+//override - გადაფარვა  - შეგვიძლია გავაკეთოთ მშობლის მეთოდი ვირტუალია (ოფშენალია) ან აბსტრაქტული (აუცილებელია)
+//overload - გადატვირთვა - როდეასც მეთოდს ერთი სახელი აქვს და პარამეტრები განსხვავებული
+//generic -  მეთოდი როელიც მუშაობს ზოგადი ტიპზე. მეთოდის იმპლემენტაციის დროს არ ვუთითებთ რა ტიპია და გამოყენების დროს ვუთითებთ
+
+
+
