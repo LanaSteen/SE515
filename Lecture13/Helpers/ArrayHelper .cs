@@ -9,6 +9,29 @@ namespace Lecture13.Helpers
 {
 	internal class ArrayHelper
 	{
+		//int   string
+		//string int
+
+		public static T1 ConvertCustom<T1,T2>(T2 rame)
+		{
+			return (T1)Convert.ChangeType(rame, typeof(T1));
+		}
+
+		                                        //[20,30,50]      //"50"                                      
+		public static T1 FintElementAnyType<T1, T2>(T1[] array, T2 serchFor)
+		{
+			 T1 serchFor1 =  (T1)Convert.ChangeType(serchFor, typeof(T1));
+			foreach (var item in array)
+			{
+				if(item.Equals(serchFor1))
+				{
+					return (T1)Convert.ChangeType(item, typeof(T1));
+				}
+				
+			}
+			return default;
+		}
+
 		public static void PrintArray<T>(T[] collection)
 		{
 			foreach (var item in collection)

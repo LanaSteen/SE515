@@ -7,13 +7,29 @@ namespace Lecture13
 	{
 		static void Main(string[] args)
 		{
+			int[] arrNew = [50, 20, 30];
+
+			int num = ArrayHelper.ConvertCustom<int,string>("10");
+			Console.WriteLine(num+5);
+
+			string str = ArrayHelper.ConvertCustom<string, int>(10);
 			int[] arr = [50,30,15,75];
+
+
+			int num2 =ArrayHelper.FintElementAnyType<int, string>(arrNew, "50");
+			Console.WriteLine(num2);
+
 
 			int[] arrEmpty = new int[0];
 
 			Student[] students = new Student[5] { new Student("Lalisa", 20), new Student("Jennie", 21), new Student("Jisoo", 21), new Student("Rose", 22), new Student("Jennie", 21) };
 
 			Student newStudent = new Student("Lalisa", 20);
+
+
+
+
+
 
 
 			//Console.WriteLine(ArrayHelper.GetFirstElement1(arr));
