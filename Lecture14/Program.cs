@@ -49,7 +49,7 @@ namespace Lecture14
 				//Console.WriteLine(x / y);
 				//Console.WriteLine(number[5]);
 				//int.Parse("ffff");
-				user.Age = 130;
+				user.Age = 30;
 			}
 			catch (FormatException ex)
 			{
@@ -61,16 +61,20 @@ namespace Lecture14
 				Console.WriteLine(ex.Message);
 			}
 
-			catch (IndexOutOfRangeException ex )
-			{
-				Console.WriteLine("Array does not have index " + ex.Message);
-			}
+			//catch (IndexOutOfRangeException ex )
+			//{
+			//	Console.WriteLine("Array does not have index " + ex.Message);
+			//}
 			catch (InvalidAgeExcepton ex)
 			{
 				Console.WriteLine(ex.Message);
 			}
+			catch(RameException ex)
+			{
+				Console.WriteLine(ex);
+			}
 
-			catch (Exception ex)
+			catch (Exception ex)  // catch all exception
 			{
 
 				Console.WriteLine("bolo" + " " + ex.Message);
@@ -79,7 +83,7 @@ namespace Lecture14
 			finally
 			{
 				Console.WriteLine("it will work anyway"); // ყველა შემთხვევაში იმუშავებს
-
+				Console.WriteLine("Process end" + DateTime.Now);
 				
 			}
 
