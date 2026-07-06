@@ -21,7 +21,7 @@ namespace Lecture15
 			//{
 			//	Console.WriteLine($"An error occurred: {ex.Message}");
 			//}
-		
+
 			//catch (Exception ex)
 			//{
 			//	Console.WriteLine($"An error occurred: {ex.Message}");
@@ -36,9 +36,9 @@ namespace Lecture15
 			//Array 
 
 			//non generic collections
+			//int[]
 
-
-			//<>
+			//<T>
 
 			int[] arr = [220, 300, 601];
 
@@ -141,7 +141,7 @@ namespace Lecture15
 			//Console.WriteLine("average " + list.Average());
 
 
-
+			
 			
 
 
