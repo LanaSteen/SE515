@@ -152,6 +152,7 @@ namespace Lecture16
 
 			Dictionary<string, string> hotline = new Dictionary<string, string>();
 
+			hotline.Add("CEO", "599656565");
 			hotline.Add("Manager", "599656565");
 			hotline.Add("Marketing", "565645445");
 			hotline.Add("Sales", "565645445");
