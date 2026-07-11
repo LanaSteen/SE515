@@ -96,7 +96,7 @@ namespace Lecture17.Algorithms
 		//}
 
 
-		public static bool CustomContains<T>(IEnumerable<T> collection, T searchFor)
+		public static bool CustomContains<T>(IEnumerable<T> collection, T searchFor) //list >50
 		{
 			foreach (var item in collection)
 			{
