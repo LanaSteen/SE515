@@ -16,7 +16,7 @@ namespace Lecture18.Helper
 	{
 
 
-		public static T FindElement<T>(IEnumerable<T> collection, T value) 
+		public static T FindElement<T>(IEnumerable<T> collection, T value)
 		{
 			foreach (var item in collection)
 			{
@@ -45,7 +45,7 @@ namespace Lecture18.Helper
 		}
 
 
-		public static T CustomFirstFunc<T>(IEnumerable<T> collection, Func<T,bool> func)
+		public static T CustomFirstFunc<T>(IEnumerable<T> collection, Func<T, bool> func)
 		{
 
 			foreach (var item in collection)
@@ -84,9 +84,9 @@ namespace Lecture18.Helper
 			{
 				foreach (var item in coolection)
 				{
-					
-						yield return item;
-				
+
+					yield return item;
+
 				}
 
 
@@ -99,7 +99,7 @@ namespace Lecture18.Helper
 					yield return item;
 				}
 			}
-	
+
 		}
 
 
@@ -123,6 +123,33 @@ namespace Lecture18.Helper
 
 
 
+
+
+		public static IEnumerable<T> SortAscending<T>(ref IEnumerable<T> collection) where T : IComparable<T>
+		{
+			List<T> list = new List<T>(collection);
+			int n = list.Count;
+			for (int i = 0; i < n - 1; i++)
+			{
+				int minIndex = i;
+				for (int j = i + 1; j < n; j++)
+				{
+					if (list[j].CompareTo(list[minIndex]) < 0)
+					{
+						minIndex = j;
+					}
+				}
+				if (minIndex != i)
+				{
+					T temp = list[i]; list[i] = list[minIndex]; list[minIndex] = temp;
+				}
+			}
+			collection = list;
+
+			return collection;
+
+
+		}
 
 
 

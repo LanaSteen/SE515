@@ -6,6 +6,39 @@ namespace Lecture18
 	{
 		static void Main(string[] args)
 		{
+
+
+			User user1 = new User(); 
+			User user = new User(); 
+			user.Age = 65; 
+			user.FirstName = "vasiko"; 
+			user1.Age = 55;
+			user1.FirstName = "niko";
+			IEnumerable<User> users = new List<User>() { user, user1 };
+
+			//ref   ორიგინალს ცვლის
+
+			CustomAlgorithms.SortAscending(ref users);
+
+			foreach (var item in users)
+			{
+				Console.WriteLine(item.Age);
+			}
+
+
+
+
+			//var users2= users.SortAscending(); 
+
+
+
+			//foreach (var item in users2) 
+			//{
+			//	Console.WriteLine(item.Age);
+			//}
+
+
+
 			List<int>	ints = new List<int>() { 20,40,60, 70};
 
 			var resultEven = CustomAlgorithms.CustomFirst(ints, IsEven); // 20
