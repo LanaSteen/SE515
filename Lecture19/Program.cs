@@ -9,20 +9,22 @@ namespace Lecture19
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello, World!");
+			//Console.WriteLine("Hello, World!");
 
-			Student student = new Student();
-			student.Print();
-
-
-		    var student2 = StudentService.GetStudents();
+			//Student student = new Student();
+			//student.Print();
 
 
+			//   var student2 = StudentService.GetStudents();
 
-			//while()
-			//{
 
-			//}
+
+			Menu.ShowMenu();
+			Menu.SelectMenuOptions();
+
+			
+
+		
 
 
 

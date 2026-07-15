@@ -4,8 +4,18 @@ namespace Lecture18
 {
 	internal class Program
 	{
+
+		static bool IsBiggerthen50(int x)
+		{
+			return x > 50;
+		}
+
 		static void Main(string[] args)
 		{
+
+			int[] nums = [40,60,70,35];
+			CustomAlgorithms.CustomFilter(nums, IsBiggerthen50);
+
 
 
 			User user1 = new User(); 
@@ -18,12 +28,12 @@ namespace Lecture18
 
 			//ref   ორიგინალს ცვლის
 
-			CustomAlgorithms.SortAscending(ref users);
+			//CustomAlgorithms.SortAscending(ref users);
 
-			foreach (var item in users)
-			{
-				Console.WriteLine(item.Age);
-			}
+			//foreach (var item in users)
+			//{
+			//	Console.WriteLine(item.Age);
+			//}
 
 
 

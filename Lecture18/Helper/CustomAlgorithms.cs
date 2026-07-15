@@ -15,6 +15,22 @@ namespace Lecture18.Helper
 	internal static class CustomAlgorithms
 	{
 
+		public static IEnumerable<T> CustomFilter<T>(IEnumerable<T> collection, Predicate<T> predicate)
+		{
+			List<T> list = new List<T>();
+			foreach (var item in collection)
+			{
+				if (predicate(item))
+				{
+					list.Add(item);
+					//yield return item;
+				}
+			}
+
+			return list;
+		}
+
+
 
 		public static T FindElement<T>(IEnumerable<T> collection, T value)
 		{
@@ -125,23 +141,49 @@ namespace Lecture18.Helper
 
 
 
-		public static IEnumerable<T> SortAscending<T>(ref IEnumerable<T> collection) where T : IComparable<T>
+		public static IEnumerable<T> CustomOrderBy<T>(ref IEnumerable<T> collection, bool asc) where T : IComparable<T>
 		{
 			List<T> list = new List<T>(collection);
 			int n = list.Count;
-			for (int i = 0; i < n - 1; i++)
+
+			if (asc)
 			{
-				int minIndex = i;
-				for (int j = i + 1; j < n; j++)
+				for (int i = 0; i < n - 1; i++)
 				{
-					if (list[j].CompareTo(list[minIndex]) < 0)
+					int minIndex = i;
+					for (int j = i + 1; j < n; j++)
 					{
-						minIndex = j;
+						if (list[j].CompareTo(list[minIndex]) < 0)
+						{
+							minIndex = j;
+						}
+					}
+					if (minIndex != i)
+					{
+						T temp = list[i];
+						list[i] = list[minIndex];
+						list[minIndex] = temp;
 					}
 				}
-				if (minIndex != i)
+			}
+			else
+			{
+				for (int i = 0; i < n - 1; i++)
 				{
-					T temp = list[i]; list[i] = list[minIndex]; list[minIndex] = temp;
+					int minIndex = i;
+					for (int j = i + 1; j < n; j++)
+					{
+						if (list[j].CompareTo(list[minIndex]) > 0)
+						{
+							minIndex = j;
+						}
+					}
+					if (minIndex != i)
+					{
+						T temp = list[i];
+						list[i] = list[minIndex];
+						list[minIndex] = temp;
+					}
 				}
 			}
 			collection = list;
