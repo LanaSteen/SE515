@@ -3,6 +3,8 @@ using Lecture19.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 
 namespace Lecture19.Services
 {
@@ -11,19 +13,22 @@ namespace Lecture19.Services
 
 
 		private readonly string path = "C:\\Users\\l4nst\\Desktop\\SE515\\Lecture19\\Data\\StudentsData.txt";
-	
-	
+
+
 		public static void SaveFileInfo(string text)
 		{
-			File.AppendAllText("C:\\Users\\l4nst\\Desktop\\SE515\\Lecture19\\Data\\StudentsData.txt", text);
+			File.AppendAllText("C:\\Users\\l4nst\\Desktop\\SE515\\Lecture19\\Data\\StudentsData.txt", text + Environment.NewLine);
 
 		}
 
-		public static  List<Student> GetStudents()
+		public static List<Student> GetStudents()
 		{
 			string[] Lines = File.ReadAllLines("C:\\Users\\l4nst\\Desktop\\SE515\\Lecture19\\Data\\StudentsData.txt");
-		
-			List<Student> students = new List<Student>()
+			List<Student> students = new List<Student>();
+			if (Lines.Length == 0)
+			{
+
+				students = new List<Student>()
 			{
 				new Student { Name = "გიორგი", LastName = "ბერიძე", Age = 20, Email = "g.beridze@gmail.com", Phone = "595112233", GPA = 3.8, Faculty = Faculty.IT },
 				new Student { Name = "ნინო", LastName = "კაპანაძე", Age = 21, Email = "nino.kapanadze@TSU.ge", Phone = "577445566", GPA = 3.9, Faculty = Faculty.Accounting  },
@@ -34,8 +39,25 @@ namespace Lecture19.Services
 				new Student { Name = "ირაკლი", LastName = "თოდუა", Age = 23, Email = "i.todua@outlook.com", Phone = "574889900", GPA = 2.9, Faculty = Faculty.IT },
 				new Student { Name = "ელენე", LastName = "აშბა", Age = 19, Email = "elene.ashba@art.com", Phone = "593556677", GPA = 3.6, Faculty = Faculty.Accounting},
 				new Student { Name = "ალექსანდრე", LastName = "ხუციშვილი", Age = 22, Email = "sandro.khuci@gmail.com", Phone = "598119922", GPA = 3.1, Faculty = Faculty.IT  },
-				new Student { Name = "თამარ", LastName = "შენგელია", Age = 20, Email = "tamuna.sh@Iliauni.ge", Phone = "555443322", GPA = 3.7, Faculty = Faculty.IT  }
-			};
+				new Student { Name = "თამარ", LastName = "shengelia", Age = 20, Email = "tamuna.sh@Iliauni.ge", Phone = "555443322", GPA = 3.7, Faculty = Faculty.IT  }
+			}; 
+			
+			}
+			else {
+
+				foreach (var item in Lines)
+				{
+					Student student = JsonSerializer.Deserialize<Student>(item);
+
+					//JsonSerializer.Serialize(item);
+
+					students.Add(student);
+				}
+
+			}
+
+			//JSON parse Stringify
+
 
 			return students;
 		}
@@ -163,8 +185,8 @@ namespace Lecture19.Services
 
 			List<Student> students = new List<Student>();
 			students = GetStudents();
-			
-			if(student is null)
+
+			if (student is null)
 			{
 				Console.WriteLine("student could not added its null");
 			}
@@ -172,13 +194,18 @@ namespace Lecture19.Services
 			{
 				students.Add(student);
 				Console.WriteLine("studdent added");
-				SaveFileInfo(student.ToString());
+				foreach (var item in students)
+				{
+					//SaveFileInfo(JsonSerializer.Serialize(item, new JsonSerializerOptions { WriteIndented = true }));
+					SaveFileInfo(JsonSerializer.Serialize(item));
+				}
+
 				//File.WriteAllText("C:\\Users\\l4nst\\Desktop\\SE515\\Lecture19\\Data\\StudentsData.txt", students.ToString());
 				//File.AppendAllText("C:\\Users\\l4nst\\Desktop\\SE515\\Lecture19\\Data\\StudentsData.txt", student.ToString());
 
 
 			}
-		
+
 
 
 		}
@@ -198,12 +225,26 @@ namespace Lecture19.Services
 				if (students[i].Name == student.Name && students[i].LastName == student.LastName)
 				{
 					students.RemoveAt(i);
-					File.WriteAllText("C:\\Users\\l4nst\\Desktop\\SE515\\Lecture19\\Data\\StudentsData.txt", students.ToString());
+
+					//foreach (var item in students)
+					//{
+					//	SaveFileInfo(item.ToString());
+					//}
+
+
+
+
+					File.WriteAllText("C:\\Users\\l4nst\\Desktop\\SE515\\Lecture19\\Data\\StudentsData.txt", "");
+					foreach (var item in students)
+					{
+						//SaveFileInfo(item.ToString());
+						SaveFileInfo(JsonSerializer.Serialize(item));
+					}
 
 				}
 			}
 
-		
+
 
 		}
 

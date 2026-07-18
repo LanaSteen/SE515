@@ -32,7 +32,7 @@ namespace Lecture19.Models
 
 		public override string? ToString()
 		{
-			return $"Name: {this.Name}, GPA: {this.GPA}, Faculty: {this.Faculty}";
+			return $"Name: {this.Name}, LastName: {this.LastName}, Age {this.Age}, Email: {this.Email}, Phone: {this.Phone}, GPA: {this.GPA}, Faculty: {this.Faculty}";
 		}
 
 		public int CompareTo(Student? other)

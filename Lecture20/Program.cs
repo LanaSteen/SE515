@@ -32,6 +32,8 @@
 			}
 
 
+			//Select    map
+
 
 			var result = numbers
 				.FirstOrDefault(x => x > 100);
