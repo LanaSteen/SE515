@@ -1,1 +1,1 @@
-[{"Id":1,"Name":"Lindsay","Age":20,"Email":"dssd@ddff.com","Subject":[{"Id":1,"Title":"Math","Grade":3},{"Id":2,"Title":"Programming","Grade":5}],"Gender":1}]
+{"Id":1,"Name":"Lindsay","Age":20,"Email":"dssd@ddff.com","Subject":[{"Id":1,"Title":"Math","Grade":3},{"Id":2,"Title":"Programming","Grade":5}],"Gender":1}

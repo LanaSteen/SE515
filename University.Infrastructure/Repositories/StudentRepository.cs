@@ -46,8 +46,14 @@ namespace University.Infrastructure.Repositories
 		{
 			var students = GetStudents();
 			students.Add(student);
-			var json = JsonSerializer.Serialize(students);
-			File.WriteAllText(_path, json);
+
+			File.WriteAllText(_path, string.Empty);
+			foreach (var item in students)
+			{
+				var json = JsonSerializer.Serialize(item);
+				File.AppendAllText(_path, json + Environment.NewLine);
+			}
+
 
 		}
 
@@ -63,8 +69,13 @@ namespace University.Infrastructure.Repositories
 				existingStudent.Subject = student.Subject;
 				existingStudent.Gender = student.Gender;
 			}
-			var json = JsonSerializer.Serialize(students);
-			File.WriteAllText(_path, json);
+
+			File.WriteAllText(_path, string.Empty);
+			foreach (var item in students)
+			{
+				var json = JsonSerializer.Serialize(item);
+				File.AppendAllText(_path, json + Environment.NewLine);
+			}
 
 		}
 
@@ -76,8 +87,13 @@ namespace University.Infrastructure.Repositories
 			if (studentToDelete != null)
 			{
 				students.Remove(studentToDelete);
-				var json = JsonSerializer.Serialize(students);
-				File.WriteAllText(_path, json);
+				File.WriteAllText(_path, string.Empty);
+				foreach (var item in students)
+				{
+					var json = JsonSerializer.Serialize(item);
+					
+					File.AppendAllText(_path, json + Environment.NewLine);
+				}
 			}
 		}
 
