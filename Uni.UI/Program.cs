@@ -14,3 +14,7 @@ namespace Uni.UI
 		}
 	}
 }
+
+
+//exe vs dll
+//Console.app vs  Class Library (DLL)

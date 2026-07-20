@@ -1,9 +1,9 @@
 <Solution>
-  <Folder Name="/Univercity/">
-    <Project Path="Uni.Core/Uni.Core.csproj" Id="32cc66f4-53ea-41eb-bd2a-a7c9e541942a" />
-    <Project Path="Uni.Repository/Uni.Repository.csproj" Id="41be1660-671d-414f-bc1d-5012e2df91ef" />
-    <Project Path="Uni.Services/Uni.Services.csproj" Id="62136ae1-b1a5-4502-bb6a-b49fc21d557c" />
-    <Project Path="Uni.UI/Uni.UI.csproj" Id="748c493d-e5f1-4721-87ee-5d0f46b8859e" />
+  <Folder Name="/University/">
+    <Project Path="University.Core/University.Core.csproj" Id="208d95ea-8b27-454d-984d-5010a72e2ee9" />
+    <Project Path="University.Infrastructure/University.Infrastructure.csproj" Id="fd8840af-c5b4-4385-97ed-775d0ad6ac65" />
+    <Project Path="University.Services/University.Services.csproj" Id="e8434417-9af5-486d-9f4b-96c36c0ecac4" />
+    <Project Path="University.UI/University.UI.csproj" Id="45b68cb9-8e76-4383-ae86-aae758d75b6c" />
   </Folder>
   <Project Path="Lecture1/Lecture1.csproj" />
   <Project Path="Lecture10/Lecture10.csproj" Id="b9ad4f06-c4e0-4024-b5c6-c61bac239929" />
