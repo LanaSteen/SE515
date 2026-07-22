@@ -12,7 +12,9 @@ namespace University.Core.Models
 		public string Name { get; set; }
 		public int Age { get; set; }
 		public string Email { get; set; }
-
+		public string Password { get; set; }
+		public string VerificationCode { get; set; }
+		public bool IsVerified { get; set; } = false;
 		public List<Subject> Subject { get; set; }
 		public Gender Gender { get; set; }
 	}

@@ -7,10 +7,10 @@ using University.Core.Models;
 
 namespace University.Infrastructure.Repositories
 {
-	public class StudentRepository : IStudentRepository
+	public class StudentRepositoryTest : IStudentRepository
 	{
 
-		private readonly string _path = "C:\\Users\\l4nst\\Desktop\\SE515\\University.Infrastructure\\Data\\Students.txt";
+		private readonly string _path = "C:\\Users\\l4nst\\Desktop\\SE515\\University.Infrastructure\\TestData\\Students.txt";
 
 
 		public List<Student> GetStudents()
@@ -68,12 +68,7 @@ namespace University.Infrastructure.Repositories
 				existingStudent.Email = student.Email;
 				existingStudent.Subject = student.Subject;
 				existingStudent.Gender = student.Gender;
-				existingStudent.IsVerified = student.IsVerified;
-				existingStudent.Password = student.Password;
-
 			}
-			int index = students.IndexOf(existingStudent);
-			students[index] = existingStudent;
 
 			File.WriteAllText(_path, string.Empty);
 			foreach (var item in students)

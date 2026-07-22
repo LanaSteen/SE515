@@ -12,17 +12,38 @@ namespace University.UI
 		{
 
 			IStudentRepository studentRepository = new StudentRepository();
-
 			StudentService studentService = new StudentService(studentRepository);
 
-			//Console.WriteLine("Hello, World!");
 
 
+			// test data
+			//IStudentRepository studentRepositoryTest = new StudentRepositoryTest();
+			//StudentService studentService = new StudentService(studentRepositoryTest);
+
+			#region login
+
+			try
+			{
+				Console.WriteLine("enter email");
+				string email = Console.ReadLine();
+				Console.WriteLine("enter pass");
+				string pass = Console.ReadLine();
+				studentService.Login(email, pass);
+			}
+			catch (Exception ex)
+			{
+
+				Console.WriteLine(ex.Message);
+			}
+			#endregion
+
+			#region Registration
 			//Student student = new Student();
-			//student.Id = 2;  // todo : This should be generated 
-			//student.Name = "sxva";
+			////student.Id = 2;  // todo : This should be generated 
+			//student.Name = "Lana";
 			//student.Age = 20;
-			//student.Email = "dssd@ddff.com";
+			//student.Email = "steenlana492@gmail.com";
+			//student.Password = "pass123"; // salt
 			//student.Gender = Gender.Female;
 			//student.Subject = new List<Subject>
 			//{
@@ -32,7 +53,26 @@ namespace University.UI
 
 			//studentService.StudentRegister(student);
 
+			#endregion
 
+
+			#region verify
+			//try
+			//{
+			//	Console.WriteLine("enter email for verify");
+			//	string email = Console.ReadLine();
+			//	Console.WriteLine("enter code");
+			//	string verificationCode = Console.ReadLine();
+			//	studentService.VerifyStudent(email, verificationCode);
+			//}
+			//catch (Exception ex)
+			//{
+
+			//	Console.WriteLine(ex.Message);
+			//}
+
+
+			#endregion
 
 
 
@@ -51,7 +91,16 @@ namespace University.UI
 			//studentService.UpdateStudent(student2);
 
 
-			studentService.DeleteStudent(2);
+
+
+
+			//studentService.DeleteStudent(2);
+
+
+
+
+			//test
+			//EmailService.SendEmail("steenlana492@gmail.com", "Test", "gamarjoba verifikaciis kodia 56565");
 
 		}
 	}
