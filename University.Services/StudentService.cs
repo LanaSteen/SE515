@@ -10,11 +10,13 @@ namespace University.Services
 	{
 
 		private readonly IStudentRepository _studentRepository;
+		private readonly LogService _logService; 
 
 		//DI
-		public StudentService(IStudentRepository studentRepository)
+		public StudentService(IStudentRepository studentRepository, LogService logService)
 		{
 			_studentRepository = studentRepository;
+			_logService = logService;
 		}
 
 		public void StudentRegister(Student student)
@@ -46,6 +48,11 @@ namespace University.Services
 
 			_studentRepository.SaveStudent(student);
 			EmailService.SendEmail(student.Email,"Email verification", $"your verification code is {student.VerificationCode}");
+
+			string ip = IpGetter.GetIpAddress();
+			_logService.Log($"Student registered. - {ip}");
+
+
 		}
 
 		public void VerifyStudent(string email, string verificationCode)
@@ -66,7 +73,8 @@ namespace University.Services
 
 			student.IsVerified = true;
 			UpdateStudent(student);
-
+			string ip = IpGetter.GetIpAddress();
+			_logService.Log($"Student verified. - {ip}");
 		}
 
 
@@ -88,6 +96,8 @@ namespace University.Services
 			}
 
 			Console.WriteLine("Login successful!");
+			string ip = IpGetter.GetIpAddress();
+			_logService.Log($"Student loged in. - {ip}");
 		}
 
 
@@ -104,6 +114,8 @@ namespace University.Services
 
 
 			_studentRepository.UpdateStudent(student);
+			string ip = IpGetter.GetIpAddress();
+			_logService.Log($"Student updated. - {ip}");
 
 		}
 
@@ -116,6 +128,8 @@ namespace University.Services
 				throw new ArgumentException("Invalid student ID.");
 			}
 			_studentRepository.DeleteStudent(id);
+			string ip = IpGetter.GetIpAddress();
+			_logService.Log($"Student deleted. - {ip}");
 		}
 
 	}
@@ -125,3 +139,7 @@ namespace University.Services
 
 
 //ptok lzfo xzrj taqa
+
+//smtp
+//ftp
+//http

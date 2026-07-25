@@ -12,8 +12,16 @@ namespace University.UI
 		{
 
 			IStudentRepository studentRepository = new StudentRepository();
-			StudentService studentService = new StudentService(studentRepository);
+			ILogRepository logRepository = new LogRepository();
 
+			LogService logService = new LogService(logRepository);
+			StudentService studentService = new StudentService(studentRepository, logService);
+
+
+			//logService.GetLogCount();
+			//Console.WriteLine(logService.GetLogCount());
+
+			//logService.ClearLogBackup();
 
 
 			// test data
@@ -52,6 +60,7 @@ namespace University.UI
 			//};
 
 			//studentService.StudentRegister(student);
+
 
 			#endregion
 
