@@ -19,10 +19,10 @@ namespace University.Services
 			_logService = logService;
 		}
 
-		public void StudentRegister(Student student)
+		public async Task StudentRegister(Student student)
 		{
 			
-			var students = _studentRepository.GetStudents();
+			var students = await _studentRepository.GetStudents();
 
 	
 			if (!student.Email.Contains("@"))
@@ -55,10 +55,10 @@ namespace University.Services
 
 		}
 
-		public void VerifyStudent(string email, string verificationCode)
+		public async Task VerifyStudent(string email, string verificationCode)
 		{
 
-			Student student = _studentRepository.StudentByEmail(email);
+			Student student = await _studentRepository.StudentByEmail(email);
 
 			if (student == null)
 			{
@@ -78,9 +78,9 @@ namespace University.Services
 		}
 
 
-		public void Login(string email, string password)
+		public async Task Login(string email, string password)
 		{
-			Student student = _studentRepository.StudentByEmail(email);
+			Student student = await _studentRepository.StudentByEmail(email);
 			if (student == null)
 			{
 				throw new ArgumentException("Invalid email");
@@ -102,7 +102,7 @@ namespace University.Services
 
 
 		//pass123
-		public void UpdateStudent(Student student)
+		public async Task UpdateStudent(Student student)
 		{
 			//todo   შემოწმდეს პაროლი თუ იცვლება და თუ კი მაშინ აქაც გვინდა ჰეშირება
 
@@ -113,7 +113,7 @@ namespace University.Services
 			}
 
 
-			_studentRepository.UpdateStudent(student);
+			await _studentRepository.UpdateStudent(student);
 			string ip = IpGetter.GetIpAddress();
 			_logService.Log($"Student updated. - {ip}");
 
@@ -121,13 +121,13 @@ namespace University.Services
 
 
 
-		public void DeleteStudent(int id)
+		public async Task DeleteStudent(int id)
 		{
 			if(id <= 0)
 			{
 				throw new ArgumentException("Invalid student ID.");
 			}
-			_studentRepository.DeleteStudent(id);
+			await _studentRepository.DeleteStudent(id);
 			string ip = IpGetter.GetIpAddress();
 			_logService.Log($"Student deleted. - {ip}");
 		}

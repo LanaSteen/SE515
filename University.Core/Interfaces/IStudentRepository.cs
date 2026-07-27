@@ -7,11 +7,10 @@ namespace University.Core.Interfaces
 {
 	public interface IStudentRepository
 	{
-		List<Student> GetStudents();
-		Student StudentByEmail(string email);
-		void SaveStudent(Student student);
-
-		void UpdateStudent(Student student);
-		void DeleteStudent(int id);
+		Task<List<Student>> GetStudents();
+		Task<Student> StudentByEmail(string email);
+		Task SaveStudent(Student student);
+		Task UpdateStudent(Student student);
+		Task DeleteStudent(int id);
 	}
 }

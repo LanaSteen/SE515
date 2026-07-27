@@ -13,7 +13,7 @@ namespace University.Infrastructure.Repositories
 		private readonly string _path = "C:\\Users\\l4nst\\Desktop\\SE515\\University.Infrastructure\\Data\\Students.txt";
 
 
-		public List<Student> GetStudents()
+		public async Task<List<Student>> GetStudents()
 		{
 			var students = new List<Student>();
 			var lines = File.ReadAllLines(_path);
@@ -35,16 +35,17 @@ namespace University.Infrastructure.Repositories
 
 
 
-		public Student StudentByEmail(string email)
+		public async Task<Student> StudentByEmail(string email)
 		{
-			var student = GetStudents().FirstOrDefault(s => s.Email == email);
-			return student;
+			var student = await GetStudents();  // todo : change this to async     // return (await GetStudents()).FirstOrDefault(s => s.Email == email);
+			var st = student.FirstOrDefault(s => s.Email == email);
+			return st;
 		}
 
 
-		public void SaveStudent(Student student)
+		public async Task SaveStudent(Student student)
 		{
-			var students = GetStudents();
+			var students =await GetStudents();
 			students.Add(student);
 
 			File.WriteAllText(_path, string.Empty);
@@ -57,9 +58,9 @@ namespace University.Infrastructure.Repositories
 
 		}
 
-		public void UpdateStudent(Student student)
+		public async Task UpdateStudent(Student student)
 		{
-			var students = GetStudents();
+			var students =await GetStudents();
 			var existingStudent = students.FirstOrDefault(s => s.Id == student.Id);
 			if (existingStudent != null)
 			{
@@ -85,9 +86,9 @@ namespace University.Infrastructure.Repositories
 		}
 
 
-		public void DeleteStudent(int id)
+		public async Task DeleteStudent(int id)
 		{
-			var students = GetStudents();
+			var students =await GetStudents();
 			var studentToDelete = students.FirstOrDefault(s => s.Id == id);
 			if (studentToDelete != null)
 			{

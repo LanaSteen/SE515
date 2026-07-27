@@ -8,7 +8,7 @@ namespace University.UI
 {
 	internal class Program
 	{
-		static void Main(string[] args)
+		static async Task Main(string[] args)
 		{
 
 			IStudentRepository studentRepository = new StudentRepository();
@@ -36,7 +36,7 @@ namespace University.UI
 				string email = Console.ReadLine();
 				Console.WriteLine("enter pass");
 				string pass = Console.ReadLine();
-				studentService.Login(email, pass);
+			    await studentService.Login(email, pass);
 			}
 			catch (Exception ex)
 			{

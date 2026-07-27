@@ -97,6 +97,30 @@ namespace University.Infrastructure.Repositories
 			}
 		}
 
+		Task<List<Student>> IStudentRepository.GetStudents()
+		{
+			throw new NotImplementedException();
+		}
+
+		Task<Student> IStudentRepository.StudentByEmail(string email)
+		{
+			throw new NotImplementedException();
+		}
+
+		Task IStudentRepository.SaveStudent(Student student)
+		{
+			throw new NotImplementedException();
+		}
+
+		Task IStudentRepository.UpdateStudent(Student student)
+		{
+			throw new NotImplementedException();
+		}
+
+		Task IStudentRepository.DeleteStudent(int id)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }
 
