@@ -4,6 +4,9 @@ using University.Core.Models;
 using University.Infrastructure.Repositories;
 using University.Services;
 
+
+
+
 namespace University.UI
 {
 	internal class Program
@@ -11,11 +14,16 @@ namespace University.UI
 		static async Task Main(string[] args)
 		{
 
-			IStudentRepository studentRepository = new StudentRepository();
-			ILogRepository logRepository = new LogRepository();
 
-			LogService logService = new LogService(logRepository);
-			StudentService studentService = new StudentService(studentRepository, logService);
+			Menu menu = new Menu(new StudentService(new StudentRepository(), new LogService(new LogRepository())), new LogService(new LogRepository()), new StudentRepository(), new LogRepository());
+			await menu.ShowMenu();
+
+
+			//IStudentRepository studentRepository = new StudentRepository();
+			//ILogRepository logRepository = new LogRepository();
+
+			//LogService logService = new LogService(logRepository);
+			//StudentService studentService = new StudentService(studentRepository, logService);
 
 
 			//logService.GetLogCount();
@@ -30,19 +38,19 @@ namespace University.UI
 
 			#region login
 
-			try
-			{
-				Console.WriteLine("enter email");
-				string email = Console.ReadLine();
-				Console.WriteLine("enter pass");
-				string pass = Console.ReadLine();
-			    await studentService.Login(email, pass);
-			}
-			catch (Exception ex)
-			{
+			//try
+			//{
+			//	Console.WriteLine("enter email");
+			//	string email = Console.ReadLine();
+			//	Console.WriteLine("enter pass");
+			//	string pass = Console.ReadLine();
+			//    await studentService.Login(email, pass);
+			//}
+			//catch (Exception ex)
+			//{
 
-				Console.WriteLine(ex.Message);
-			}
+			//	Console.WriteLine(ex.Message);
+			//}
 			#endregion
 
 			#region Registration

@@ -2,6 +2,8 @@
 
 namespace Lecture25
 {
+	//Thread   მუშა რომელიც ონკანს აკეთებს  - მულტისრედინგი
+	//Stream   მილი რომელშიც წყალი გაივლის 
 	internal class Program
 	{
 		static async Task Main(string[] args)
@@ -93,6 +95,8 @@ namespace Lecture25
 			#endregion
 		}
 
+
+		//ნაკადი  thread  Stream
 
 
 		static async Task Print()
