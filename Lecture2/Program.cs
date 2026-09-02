@@ -98,12 +98,16 @@ namespace Lecture2
 			//Console.WriteLine(5 > 4 ? "true" : "false");
 
 
+			string? saxeli = null;
+
 			//??     
 			//string name = null;
 
-			//string? name =null;
+			string? name = null;
 
-			//Console.WriteLine(name ?? "Unknown"); ;
+			Console.WriteLine(name ?? "Unknown");
+
+
 
 			//int x = 5;
 			//x *= 5;
@@ -183,6 +187,11 @@ namespace Lecture2
 
 
 			//Console.WriteLine("Enter your Sallary");
+			//int sallary = int.Parse(Console.ReadLine());  // 1500
+
+			//int sallary = Convert.ToInt32(Console.ReadLine());
+		
+
 			//bool valid = decimal.TryParse(Console.ReadLine(), out decimal sallary);
 
 			////if (valid)  // &&  
@@ -223,32 +232,42 @@ namespace Lecture2
 			//Console.WriteLine("გამარრჯობა");
 
 
-			Console.WriteLine("Enter Age");
-			byte age;
-			bool validAge = byte.TryParse(Console.ReadLine(), out age);
+			//Console.WriteLine("Enter Age");
+			//byte age;
+			//bool validAge = byte.TryParse(Console.ReadLine(), out age);
 
 
-			Console.WriteLine("Enter Country");
-			string country = Console.ReadLine();
+			//Console.WriteLine("Enter Country");
+			//string country = Console.ReadLine();
 
-			if (country == "GEO" && age < 18 && validAge)
-			{
-				Console.WriteLine("free");
-			}else if (country == "GEO" && age >= 18 && validAge)
-			{
-				Console.WriteLine("hulf price");
-			}
-			else if (validAge)
-			{
-				Console.WriteLine("full price");
-			}
-			else
-			{
-				Console.WriteLine("Invalid input");
-			}
+			//if (country == "GEO" && age < 18 && validAge)
+			//{
+			//	Console.WriteLine("free");
+			//}
+			//else if (country == "GEO" && age >= 18 && validAge)
+			//{
+			//	Console.WriteLine("hulf price");
+			//}
+			//else if (validAge)
+			//{
+			//	Console.WriteLine("full price");
+			//}
+			//else
+			//{
+			//	Console.WriteLine("Invalid input");
+			//}
 
 
-
+			//string rame;
+			//Test(rame = "dsdds");
 		}
+
+
+
+
+		//static void Test(string x = "dsdsd")
+		//{
+		//	Console.WriteLine("Test");
+		//}
 	}
 }

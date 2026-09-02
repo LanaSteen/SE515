@@ -91,15 +91,19 @@
 			//decimal sallary3 = 5000.6m;   
 
 
+			var x = 5.2m;
+
 
 			//Char  x = 'a';
 			//char y = 'b';
+
 
 			//int z = 10;
 			//Int32 xx = 10;
 
 
-
+			int num = 10;
+			string name = "john";
 
 		}
 	}

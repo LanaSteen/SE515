@@ -1,30 +1,75 @@
 <Solution>
+  <Folder Name="/Lecture1 - data types/">
+    <Project Path="Lecture1/Lecture1.csproj" />
+  </Folder>
+  <Folder Name="/Lecture10 - oop + file/">
+    <Project Path="Lecture10/Lecture10.csproj" Id="b9ad4f06-c4e0-4024-b5c6-c61bac239929" />
+  </Folder>
+  <Folder Name="/Lecture11 - enum &amp; interface/">
+    <Project Path="Lecture11/Lecture11.csproj" Id="4b9fcde2-3140-48a5-b27f-551e2f9625b8" />
+  </Folder>
+  <Folder Name="/Lecture12 - Generic/">
+    <Project Path="Lecture12/Lecture12.csproj" Id="cdefa064-c045-4129-a4ff-04b4095430b3" />
+  </Folder>
+  <Folder Name="/Lecture13 - generic helpers/">
+    <Project Path="Lecture13/Lecture13.csproj" Id="86b19905-8cc2-4916-bef6-bc79721e88cd" />
+  </Folder>
+  <Folder Name="/Lecture14 - Exceptions/">
+    <Project Path="Lecture14/Lecture14.csproj" Id="d2769d1c-9570-4109-ab88-6789273ebdd8" />
+  </Folder>
+  <Folder Name="/Lecture15 - list/">
+    <Project Path="Lecture15/Lecture15.csproj" Id="d15b20b3-969e-4234-90b3-1d0c8047926e" />
+  </Folder>
+  <Folder Name="/Lecture16 - collections/">
+    <Project Path="Lecture16/Lecture16.csproj" Id="a1fe28f7-615a-4e94-8895-269d9d1edb80" />
+  </Folder>
+  <Folder Name="/Lecture17 - collection algorithms/">
+    <Project Path="Lecture17/Lecture17.csproj" Id="61b836b4-d3ee-44c8-99fa-30e894108064" />
+  </Folder>
+  <Folder Name="/LEcture18 - IEnumerable/">
+    <Project Path="Lecture18/Lecture18.csproj" Id="3db24264-0382-4839-a615-fd6823a8f019" />
+  </Folder>
+  <Folder Name="/Lecture19 - JsonSerializer/">
+    <Project Path="Lecture19/Lecture19.csproj" Id="ec9912be-54b2-4ea9-8698-2d92504b6d8a" />
+  </Folder>
+  <Folder Name="/Lecture2 - opperators/">
+    <Project Path="Lecture2/Lecture2.csproj" Id="0f7fad9c-34ba-4f36-9045-ec85101d1250" />
+  </Folder>
+  <Folder Name="/Lecture20 - LINQ/">
+    <Project Path="Lecture20/Lecture20.csproj" Id="277253c1-6946-4213-8b26-cf7b4b7fd467" />
+  </Folder>
+  <Folder Name="/Lecture25 - Thread &amp; task/">
+    <Project Path="Lecture25/Lecture25.csproj" Id="3d0955ff-084f-40a7-a313-08fbe85679f1" />
+  </Folder>
+  <Folder Name="/Lecture26 - Attributes/">
+    <Project Path="Lecture26/Lecture26.csproj" Id="73ea9f97-641b-40df-ace9-639ec64c22bd" />
+  </Folder>
+  <Folder Name="/Lecture3 - if &amp; switch/">
+    <Project Path="Lecture3/Lecture3.csproj" Id="b61180a5-cc9a-400b-817c-a8b291bada35" />
+  </Folder>
+  <Folder Name="/Lecture4 - loops/">
+    <Project Path="Lecture4/Lecture4.csproj" Id="07e5b395-ddb3-44bf-bbc6-3ee4fa18ca79" />
+  </Folder>
+  <Folder Name="/LEcture5 - jagged &amp; 2d array/">
+    <Project Path="Lecture5/Lecture5.csproj" Id="cafc8fb7-7ff4-45f0-bcab-38518802d246" />
+  </Folder>
+  <Folder Name="/Lecture6 - StringBuilder/">
+    <Project Path="Lecture6/Lecture6.csproj" Id="407a7695-804d-45c8-a155-73c9d8b9d205" />
+  </Folder>
+  <Folder Name="/Lecture7 - methods/">
+    <Project Path="Lecture7/Lecture7.csproj" Id="35adbfa7-2d56-402d-a54d-870e9ff907ec" />
+  </Folder>
+  <Folder Name="/Lecture8 - oop/">
+    <Project Path="Lecture8/Lecture8.csproj" Id="7715f830-9d3b-4f2b-afa3-56f180b17b8e" />
+  </Folder>
+  <Folder Name="/Lecture9 - file/">
+    <Project Path="Lecture9/Lecture9.csproj" Id="24654752-08e5-4673-ba6a-bd56549f7509" />
+  </Folder>
   <Folder Name="/University/">
     <Project Path="University.Core/University.Core.csproj" Id="208d95ea-8b27-454d-984d-5010a72e2ee9" />
     <Project Path="University.Infrastructure/University.Infrastructure.csproj" Id="fd8840af-c5b4-4385-97ed-775d0ad6ac65" />
     <Project Path="University.Services/University.Services.csproj" Id="e8434417-9af5-486d-9f4b-96c36c0ecac4" />
     <Project Path="University.UI/University.UI.csproj" Id="45b68cb9-8e76-4383-ae86-aae758d75b6c" />
   </Folder>
-  <Project Path="Lecture1/Lecture1.csproj" />
-  <Project Path="Lecture10/Lecture10.csproj" Id="b9ad4f06-c4e0-4024-b5c6-c61bac239929" />
-  <Project Path="Lecture11/Lecture11.csproj" Id="4b9fcde2-3140-48a5-b27f-551e2f9625b8" />
-  <Project Path="Lecture12/Lecture12.csproj" Id="cdefa064-c045-4129-a4ff-04b4095430b3" />
-  <Project Path="Lecture13/Lecture13.csproj" Id="86b19905-8cc2-4916-bef6-bc79721e88cd" />
-  <Project Path="Lecture14/Lecture14.csproj" Id="d2769d1c-9570-4109-ab88-6789273ebdd8" />
-  <Project Path="Lecture15/Lecture15.csproj" Id="d15b20b3-969e-4234-90b3-1d0c8047926e" />
-  <Project Path="Lecture16/Lecture16.csproj" Id="a1fe28f7-615a-4e94-8895-269d9d1edb80" />
-  <Project Path="Lecture17/Lecture17.csproj" Id="61b836b4-d3ee-44c8-99fa-30e894108064" />
-  <Project Path="Lecture18/Lecture18.csproj" Id="3db24264-0382-4839-a615-fd6823a8f019" />
-  <Project Path="Lecture19/Lecture19.csproj" Id="ec9912be-54b2-4ea9-8698-2d92504b6d8a" />
-  <Project Path="Lecture2/Lecture2.csproj" Id="0f7fad9c-34ba-4f36-9045-ec85101d1250" />
-  <Project Path="Lecture20/Lecture20.csproj" Id="277253c1-6946-4213-8b26-cf7b4b7fd467" />
-  <Project Path="Lecture25/Lecture25.csproj" Id="3d0955ff-084f-40a7-a313-08fbe85679f1" />
-  <Project Path="Lecture26/Lecture26.csproj" Id="73ea9f97-641b-40df-ace9-639ec64c22bd" />
-  <Project Path="Lecture3/Lecture3.csproj" Id="b61180a5-cc9a-400b-817c-a8b291bada35" />
-  <Project Path="Lecture4/Lecture4.csproj" Id="07e5b395-ddb3-44bf-bbc6-3ee4fa18ca79" />
-  <Project Path="Lecture5/Lecture5.csproj" Id="cafc8fb7-7ff4-45f0-bcab-38518802d246" />
-  <Project Path="Lecture6/Lecture6.csproj" Id="407a7695-804d-45c8-a155-73c9d8b9d205" />
-  <Project Path="Lecture7/Lecture7.csproj" Id="35adbfa7-2d56-402d-a54d-870e9ff907ec" />
-  <Project Path="Lecture8/Lecture8.csproj" Id="7715f830-9d3b-4f2b-afa3-56f180b17b8e" />
-  <Project Path="Lecture9/Lecture9.csproj" Id="24654752-08e5-4673-ba6a-bd56549f7509" />
+  <Project Path="Repeat/Repeat.csproj" Id="0a0fc611-a6fe-4910-9c03-125ddd910d4a" />
 </Solution>

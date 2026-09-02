@@ -122,29 +122,29 @@
 
 			// ჩამოთვლადი 
 
-			//int z = 10;
+			int z = 11;
 
-			//switch (z)
-			//{
-			//	case 5:
-			//		Console.WriteLine("x is 5");
-			//		break;
-			//	case 8:
-			//	case 9:
-			//		Console.WriteLine("x is 8 or 9");
-			//		break;
-			//	case 11:
-			//		Console.WriteLine("x is 10 or 11 ");
-			//		return;
-			//	case 10:
-			//		Console.WriteLine("x is 10");
-			//		goto case 11;                         // return;  /// მთლიანად ხურავს მეთოდს 
+			switch (z)
+			{
+				case 5:
+					Console.WriteLine("x is 5");
+					break;
+				case 8:
+				case 9:
+					Console.WriteLine("x is 8 or 9");
+					break;
+				case 11:
+					Console.WriteLine("x is 10 or 11 ");
+					return;
+				case 10:
+					Console.WriteLine("x is 10");
+					goto case 11;                         // return;  /// მთლიანად ხურავს მეთოდს 
 
 
-			//	default:
-			//		Console.WriteLine("unknown");
-			//		break;
-			//}
+				default:
+					Console.WriteLine("unknown");
+					break;
+			}
 
 
 

@@ -324,12 +324,12 @@
 			//program.TestMEthod2(100); /// ეს ცუდია
 
 			Console.WriteLine();  // სტატიკური მეთოდია
-
+		
 
 			Random rand = new Random();
 			//Random.Next()
 
-			rand.Next();  ///  არასტატიკური მეთოდია
+			rand.Next(1,100);  ///  არასტატიკური მეთოდია
 
 
 

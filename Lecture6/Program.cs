@@ -224,6 +224,7 @@ namespace Lecture6
 
 
 			string rame = "dsfd";
+			rame = "dsdfdfdfgh";
 
 			StringBuilder sb = new StringBuilder(rame);
 
@@ -236,6 +237,8 @@ namespace Lecture6
 
 
 			sb.Replace("hello", "hi");
+			Console.WriteLine(sb);
+			sb.ToString();
 
 
 			string test = "dsfdf";
