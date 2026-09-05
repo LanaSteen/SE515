@@ -1,0 +1,11 @@
+82.0,True,Olivia,Jones,21
+61.2,True,James,Lopez,19
+79.5,True,John,Johnson,21
+61.6,True,Daniel,Brown,24
+61.0,False,Robert,Wilson,18
+87.9,True,Olivia,Miller,23
+63.9,True,Robert,Garcia,19
+54.6,True,Sarah,Wilson,23
+80.2,True,Olivia,Davis,19
+98.7,False,Jane,Rodriguez,22
+95.5,True,John,Doe,20
