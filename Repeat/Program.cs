@@ -9,7 +9,7 @@ namespace Repeat
 		{
 
 			string path = "C:\\Users\\l4nst\\Desktop\\new515\\Repeat\\Models\\Data\\data.txt";
-
+			// test
 			//File.ReadAllLines();
 
 			string[] lines = File.ReadAllLines(path);
