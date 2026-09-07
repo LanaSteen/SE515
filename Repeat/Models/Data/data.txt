@@ -9,3 +9,5 @@
 80.2,True,Olivia,Davis,19
 98.7,False,Jane,Rodriguez,22
 95.5,True,John,Doe,20
+
+95.5,True,John,Doe,20
