@@ -48,3 +48,5 @@ namespace RepeatGeneric
 
 
 
+// record
+// struct
