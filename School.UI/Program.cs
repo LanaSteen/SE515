@@ -1,4 +1,7 @@
-﻿using School.Domain.Models;
+﻿using School.Domain.Interfaces;
+using School.Domain.Models;
+using School.Infrastructure;
+using School.Service.Implementations;
 
 namespace School.UI
 {
@@ -10,10 +13,13 @@ namespace School.UI
 			User user = new();
 
 
-		
+			IUserRepository _userRepository = new UserRepository();
+			UserService _userService = new UserService(_userRepository);
 
-			
-			AdminMenu.ShowMenu();
+		
+			AdminMenu adminMenu = new(_userService, _userRepository);
+
+			adminMenu.ShowMenu();
 			
 
 		}
