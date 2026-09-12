@@ -9,6 +9,13 @@ namespace School.UI
 
 			User user = new();
 
+
+		
+
+			
+			AdminMenu.ShowMenu();
+			
+
 		}
 	}
 }

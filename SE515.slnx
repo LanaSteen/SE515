@@ -72,6 +72,12 @@
     <Project Path="University.Services/University.Services.csproj" Id="e8434417-9af5-486d-9f4b-96c36c0ecac4" />
     <Project Path="University.UI/University.UI.csproj" Id="45b68cb9-8e76-4383-ae86-aae758d75b6c" />
   </Folder>
+  <Folder Name="/School/">
+    <Project Path="School.Domain/School.Domain.csproj" Id="2901c73f-7006-4326-b698-3aff65c2f46a" />
+    <Project Path="School.Infrastructure/School.Infrastructure.csproj" Id="78c26fab-eac6-4f87-b620-28355e03b2c4" />
+    <Project Path="School.Service/School.Service.csproj" Id="48b54b7c-cb57-4e03-a3fb-22d82e2e8366" />
+    <Project Path="School.UI/School.UI.csproj" Id="249e67a8-6f07-433d-8d48-b323d82b99da" />
+  </Folder>
   <Project Path="Repeat/Repeat.csproj" Id="0a0fc611-a6fe-4910-9c03-125ddd910d4a" />
   <Project Path="RepeatGeneric/RepeatGeneric.csproj" Id="3e9255cf-4a54-4e3e-ae6b-2cb80e2434d6" />
 </Solution>

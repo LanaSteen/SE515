@@ -10,4 +10,8 @@
     <ProjectReference Include="..\School.Domain\School.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
 </Project>

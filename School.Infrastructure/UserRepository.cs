@@ -1,11 +1,12 @@
-﻿using School.Domain.Models;
+﻿using School.Domain.Interfaces;
+using School.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace School.Infrastructure
 {
-	public class UserRepository
+	public class UserRepository  : IUserRepository
 	{
 
 

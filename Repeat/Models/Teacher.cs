@@ -10,6 +10,7 @@ namespace Repeat.Models
 		public Teacher()
 		{
 		}
+	
 
 		public int WorkExperience { get; set; } // 6
 
@@ -17,6 +18,7 @@ namespace Repeat.Models
 		{
 			return this.WorkExperience.CompareTo(other?.WorkExperience);
 		}
+
 
 		public override void Print()
 		{
