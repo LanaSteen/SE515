@@ -7,7 +7,7 @@ namespace School.UI
 {
 	internal class Program
 	{
-		static void Main(string[] args)
+		static async Task Main(string[] args)
 		{
 
 			User user = new();
@@ -19,7 +19,9 @@ namespace School.UI
 		
 			AdminMenu adminMenu = new(_userService, _userRepository);
 
-			adminMenu.ShowMenu();
+
+			await Task.Delay(1000);
+			await adminMenu.ShowMenu();
 			
 
 		}

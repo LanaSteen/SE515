@@ -7,11 +7,11 @@ namespace School.Domain.Interfaces
 {
 	public interface IUserRepository
 	{
-		List<User> GetUsers();
-		User GetUserById(int id);
-		User GetUserByUsername(string username);
-		void AddUser(User user);
-		void DeleteUser(int id);
-		void UpdateUser(User user);
+		Task<List<User>> GetUsers();
+		Task<User> GetUserById(int id);
+		Task<User> GetUserByUsername(string username);
+		Task AddUser(User user);
+		Task DeleteUser(int id);
+		Task UpdateUser(User user);
 	}
 }

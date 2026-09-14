@@ -17,7 +17,7 @@ namespace School.Service.Implementations
 		}
 
 
-		public List<User> GetUsers()
+		public async Task<List<User>> GetUsers()
 		{
 		    var users =	_userRepository.GetUsers();
 			if(users == null)
@@ -26,12 +26,12 @@ namespace School.Service.Implementations
 			}
 
 
-			return _userRepository.GetUsers();
+			return await _userRepository.GetUsers();
 		}
 
-		public User GetUserById(int id)
+		public async Task<User> GetUserById(int id)
 		{
-			var user = _userRepository.GetUserById(id);
+			var user = await _userRepository.GetUserById(id);
 			if (user == null)
 			{
 				throw new Exception("User not found");
@@ -39,17 +39,17 @@ namespace School.Service.Implementations
 			return user;
 		}
 
-		public User GetUserByUsername(string name) 
+		public async Task<User> GetUserByUsername(string name) 
 		{ 
 		  if(string.IsNullOrEmpty(name))
 			{
 				throw new Exception("Name is null or empty");
 			}
-			return _userRepository.GetUserByUsername(name);
+			return await _userRepository.GetUserByUsername(name);
 		}
 
 
-		public void AddUser(User user)
+		public async Task AddUser(User user)
 		{
 		
 			if (user == null)
@@ -57,30 +57,31 @@ namespace School.Service.Implementations
 				throw new Exception("User is null");
 			}
 			
-			List<User> users = _userRepository.GetUsers();
+			List<User> users =await _userRepository.GetUsers();
 			int nextId = users.MaxBy(u => u.Id).Id++;
 			user.Id = nextId;
 			_userRepository.AddUser(user);
 		}
 
 
-		public void DeleteUser(int id)
+
+		public async Task DeleteUser(int id)
 		{  
 			if(id < 0)
 			{
 				throw new Exception("Id is less than or equal to 0");
 			}
-			_userRepository.DeleteUser(id); 
+			await _userRepository.DeleteUser(id); 
 		
 		}
 
-		public void UpdateUser(User user)
+		public async Task UpdateUser(User user)
 		{
 			if (user == null)
 			{
 				throw new Exception("User is null");
 			}
-			_userRepository.UpdateUser(user);
+		  await _userRepository.UpdateUser(user);
 		}
 	}
 }

@@ -80,4 +80,5 @@
   </Folder>
   <Project Path="Repeat/Repeat.csproj" Id="0a0fc611-a6fe-4910-9c03-125ddd910d4a" />
   <Project Path="RepeatGeneric/RepeatGeneric.csproj" Id="3e9255cf-4a54-4e3e-ae6b-2cb80e2434d6" />
+  <Project Path="Thread-Task/Thread-Task.csproj" Id="f43b1568-2bb6-494c-820b-d960996f67d7" />
 </Solution>

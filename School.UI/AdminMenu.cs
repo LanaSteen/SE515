@@ -22,7 +22,7 @@ namespace School.UI
 		
 		}
 
-		public  void ShowMenu()
+		public  async Task ShowMenu()
 		{
 			Console.WriteLine("Admin Menu");
 			Console.WriteLine("1. Add User");
@@ -39,7 +39,7 @@ namespace School.UI
 					user.UserName = Console.ReadLine();
 					//IUserRepository userRepository = new UserRepository();
 					//UserService userService = new UserService(userRepository); // TodO ობიექტის შექმნა არ სჭირდება  სტატიკი არ უნდა ყოფილიყო მმეთოდი ამას რომ არ გაეჭედა
-					_userService.AddUser(user);
+				 await	_userService.AddUser(user);
 					break;
 				case "2":
 					//DeleteUser();
