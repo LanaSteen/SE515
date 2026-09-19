@@ -1,59 +1,115 @@
 ﻿using School.Domain.Interfaces;
 using School.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Text.Json;
 
 namespace School.Infrastructure
 {
-	public class UserRepository  : IUserRepository
+	public class UserRepository : IUserRepository
 	{
-
-
-		string path = @"C:\Users\l4nst\Desktop\new515\School.Infrastructure\Data\users.json";
-
+		private readonly string path = Path.GetFullPath(
+	Path.Combine(
+		AppContext.BaseDirectory,
+		"..",
+		"..",
+		"..",
+		"..",
+		"School.Infrastructure",
+		"Data",
+		"users.json"
+	)
+);
 		public async Task<List<User>> GetUsers()
 		{
+			if (!File.Exists(path))
+			{
+				return new List<User>();
+			}
+
 			var json = await File.ReadAllTextAsync(path);
-			var users = System.Text.Json.JsonSerializer.Deserialize<List<User>>(json);
-			return users;
+
+			if (string.IsNullOrWhiteSpace(json))
+			{
+				return new List<User>();
+			}
+
+			var users = JsonSerializer.Deserialize<List<User>>(json);
+
+			return users ?? new List<User>();
 		}
 
-		public async Task<User> GetUserById(int id)
+		public async Task<User?> GetUserById(int id)
 		{
-			var json = await File.ReadAllTextAsync(path);
-			var user = System.Text.Json.JsonSerializer.Deserialize<User>(json);
-			return user;
+			var users = await GetUsers();
+
+			return users.FirstOrDefault(u => u.Id == id);
 		}
-		public async Task<User> GetUserByUsername(string username)
+
+		public async Task<User?> GetUserByUsername(string username)
 		{
-			var json = await File.ReadAllTextAsync(path);
-			var user = System.Text.Json.JsonSerializer.Deserialize<User>(json);
-			return user;
+			var users = await GetUsers();
+
+			return users.FirstOrDefault(u => u.UserName == username);
 		}
 
 		public async Task AddUser(User user)
 		{
 			var users = await GetUsers();
+
 			users.Add(user);
-			var json = System.Text.Json.JsonSerializer.Serialize(users);
-			File.WriteAllText(path, json);
+
+			var json = JsonSerializer.Serialize(
+				users,
+				new JsonSerializerOptions
+				{
+					WriteIndented = true
+				}
+			);
+
+			await File.WriteAllTextAsync(path, json);
 		}
 
-		public async Task DeleteUser(int id) {
+		public async Task DeleteUser(int id)
+		{
 			var users = await GetUsers();
-			users.Remove(await GetUserById(id));
-			var json = System.Text.Json.JsonSerializer.Serialize(users);
-			File.WriteAllText(path, json);
+
+			var user = users.FirstOrDefault(u => u.Id == id);
+
+			if (user == null)
+				return;
+
+			users.Remove(user);
+
+			var json = JsonSerializer.Serialize(
+				users,
+				new JsonSerializerOptions
+				{
+					WriteIndented = true
+				}
+			);
+
+			await File.WriteAllTextAsync(path, json);
 		}
-		public async Task UpdateUser(User user) {
+
+		public async Task UpdateUser(User user)
+		{
 			var users = await GetUsers();
+
 			var index = users.FindIndex(u => u.Id == user.Id);
-			if (index != -1) {
-				users[index] = user;
-				var json = System.Text.Json.JsonSerializer.Serialize(users);
-				File.WriteAllText(path, json);
-			}
+
+			if (index == -1)
+				return;
+
+			users[index] = user;
+
+			var json = JsonSerializer.Serialize(
+				users,
+				new JsonSerializerOptions
+				{
+					WriteIndented = true
+				}
+			);
+
+			await File.WriteAllTextAsync(path, json);
 		}
 	}
 }

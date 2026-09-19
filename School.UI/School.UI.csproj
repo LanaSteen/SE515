@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Spectre.Console" Version="0.57.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\School.Domain\School.Domain.csproj" />
     <ProjectReference Include="..\School.Infrastructure\School.Infrastructure.csproj" />
     <ProjectReference Include="..\School.Service\School.Service.csproj" />
