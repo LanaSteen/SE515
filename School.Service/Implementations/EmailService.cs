@@ -1,4 +1,5 @@
-﻿using School.Service.Interfaces;
+﻿using Microsoft.Extensions.Configuration;
+using School.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Net.Mail;
@@ -6,21 +7,33 @@ using System.Text;
 
 namespace School.Service.Implementations
 {
-	public class EmailService : IEmailService	
+	public class EmailService : IEmailService
 	{
 
+		private readonly IConfiguration _configuration;
 
 
-		public static void SendEmail(string to, string subject, string body)
+		public EmailService(IConfiguration configuration)
+		{
+			_configuration = configuration;
+		}
+
+
+
+		public void SendEmail(string to, string subject, string body)
 		{
 
+			var smtpserver = _configuration["EmailSerrings:Server"];
+			var port = int.Parse(_configuration["EmailSerrings:Port"]);
+			var sender = _configuration["EmailSerrings:Sender"];
+			var password = _configuration["EmailSerrings:Password"];
 
-			SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+			SmtpClient client = new SmtpClient(smtpserver, port);
 			client.EnableSsl = true;
-			client.Credentials = new System.Net.NetworkCredential("stepacc210@gmail.com", "pxzx laak iyop lzzl");
+			client.Credentials = new System.Net.NetworkCredential(sender, password);
 
 			MailMessage message = new MailMessage();
-			message.From = new MailAddress("stepacc210@gmail.com");  // todo hide sender
+			message.From = new MailAddress(sender);  // todo hide sender
 			
 			message.To.Add(to);
 			message.Subject = subject;

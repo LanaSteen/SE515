@@ -1,5 +1,6 @@
 ﻿using School.Domain.Interfaces;
 using School.Domain.Models;
+using School.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,10 +11,14 @@ namespace School.Service.Implementations
 	{
 		//DI
 		private readonly IUserRepository _userRepository;
+		private readonly IEmailService _emailService;
+		private readonly LoggerService _loggerService; // I  გასაკეთებელია
 
-		public UserService(IUserRepository userRepository) 
+		public UserService(IUserRepository userRepository, IEmailService emailService, LoggerService loggerService)
 		{
 			_userRepository = userRepository;
+			_emailService = emailService;
+			_loggerService= loggerService;
 		}
 
 
@@ -23,9 +28,10 @@ namespace School.Service.Implementations
 			if(users == null)
 			{
 				throw new Exception("No users found");
+				_loggerService.Log("No users found");
 			}
 
-
+			_loggerService.Log("get users");
 			return await _userRepository.GetUsers();
 		}
 
@@ -54,6 +60,7 @@ namespace School.Service.Implementations
 			if (user == null)
 			{
 				throw new Exception("User is null");
+				_loggerService.Log("User is null");
 			}
 
 			List<User> users = await _userRepository.GetUsers();
@@ -66,13 +73,14 @@ namespace School.Service.Implementations
 
 			user.VerificationCode = GenerateVerificationCode();
 
+			_loggerService.Log($"usr added {user.UserName}");
+		
+		await _userRepository.AddUser(user);
 
-			await _userRepository.AddUser(user);
 
 
 
-
-EmailService.SendEmail(
+	_emailService.SendEmail(
 	user.Email,
 	"Verification Code",
 	$@"<!DOCTYPE html>

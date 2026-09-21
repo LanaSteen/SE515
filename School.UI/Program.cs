@@ -1,7 +1,9 @@
-﻿using School.Domain.Interfaces;
+﻿using Microsoft.Extensions.Configuration;
+using School.Domain.Interfaces;
 using School.Domain.Models;
 using School.Infrastructure;
 using School.Service.Implementations;
+using School.Service.Interfaces;
 using Spectre.Console;
 
 namespace School.UI
@@ -13,9 +15,16 @@ namespace School.UI
 
 			User user = new();
 
+			var coinfiguration = new ConfigurationBuilder()
+				.SetBasePath(Directory.GetCurrentDirectory())
+				.AddJsonFile("appsettings.json")
+				.Build();
+
+			LoggerService logservice = new();
 
 			IUserRepository _userRepository = new UserRepository();
-			UserService _userService = new UserService(_userRepository);
+			IEmailService emailService = new EmailService(coinfiguration);
+			UserService _userService = new UserService(_userRepository, emailService, logservice);
 
 
 
