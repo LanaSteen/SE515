@@ -10,3 +10,4 @@ namespace School.Service.Interfaces
 		Task<List<Student>> GetStudentslsit();
 	}
 }
+

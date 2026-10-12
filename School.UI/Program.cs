@@ -48,34 +48,55 @@ namespace School.UI
 			//dotnet add package Spectre.Console
 
 
-		//	Console.WriteLine("Enter password");
-		//	var password = new TextPrompt<string>("Enter your [green]password[/]:")
-	 //      .Secret();
+			//	Console.WriteLine("Enter password");
+			//	var password = new TextPrompt<string>("Enter your [green]password[/]:")
+			//      .Secret();
 
-		//	var result = AnsiConsole.Prompt(password);
+			//	var result = AnsiConsole.Prompt(password);
 
-		//	AnsiConsole.MarkupLine($"Password length: [blue]{result.Length}[/] characters");
-
-
-
-		//	var features = AnsiConsole.Prompt(
-	 //    new MultiSelectionPrompt<string>()
-		//.Title("Select [green]features[/] to enable:")
-		//.AddChoices("Logging", "Caching", "Authentication", "Analytics"));
-
-		//	AnsiConsole.MarkupLine($"Enabled: [blue]{string.Join(", ", features)}[/]");
+			//	AnsiConsole.MarkupLine($"Password length: [blue]{result.Length}[/] characters");
 
 
+
+			//	var features = AnsiConsole.Prompt(
+			//    new MultiSelectionPrompt<string>()
+			//.Title("Select [green]features[/] to enable:")
+			//.AddChoices("Logging", "Caching", "Authentication", "Analytics"));
+
+			//	AnsiConsole.MarkupLine($"Enabled: [blue]{string.Join(", ", features)}[/]");
 
 
 
 
-		//	var fruit = AnsiConsole.Prompt(
-	 //     new SelectionPrompt<string>()
-		//.Title("What's your favorite fruit?")
-		//.AddChoices("Apple", "Banana", "Orange", "Mango", "Strawberry"));
 
-		//	AnsiConsole.MarkupLine($"You selected: [green]{fruit}[/]");
-		}
+
+			//	var fruit = AnsiConsole.Prompt(
+			//     new SelectionPrompt<string>()
+			//.Title("What's your favorite fruit?")
+			//.AddChoices("Apple", "Banana", "Orange", "Mango", "Strawberry"));
+
+			//	AnsiConsole.MarkupLine($"You selected: [green]{fruit}[/]");
+
+
+
+			Client user123 = new();
+
+			Console.WriteLine(user123.Age); 
+
+
+			user123.Age = 25; // Valid age
+
+
+
+
+			var password = new TextPrompt<string>("Enter your [green]password[/]:")
+				.Secret();
+
+			var result = AnsiConsole.Prompt(password);
+
+			AnsiConsole.MarkupLine($"Password length: [blue]{result.Length}[/] characters");
+
+
+		}	
 	}
 }

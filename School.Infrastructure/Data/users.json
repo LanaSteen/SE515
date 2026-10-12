@@ -40,5 +40,11 @@
     "UserName": "admin",
     "Email": "steenlana492@gmail.com",
     "VerificationCode": "7291"
+  },
+  {
+    "Id": 8,
+    "UserName": "admin",
+    "Email": "steenlana492@gmail.com",
+    "VerificationCode": "2074"
   }
 ]

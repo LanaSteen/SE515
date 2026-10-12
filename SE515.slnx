@@ -1,4 +1,10 @@
 <Solution>
+  <Folder Name="/ADO.NET/">
+    <Project Path="Step.Application/Step.Application.csproj" Id="ed444656-92ca-43b3-9bba-9eedeae5a32a" />
+    <Project Path="Step.Domain/Step.Domain.csproj" Id="6da8959b-ef22-4c7a-a7c0-87f157d9e642" />
+    <Project Path="Step.Infrastructure/Step.Infrastructure.csproj" Id="09b8c743-d196-472c-b552-c5a4ecfa5715" />
+    <Project Path="Step.UI/Step.UI.csproj" Id="0ffd6c1d-0bf6-49c8-ba68-ae48a9b8d6c0" />
+  </Folder>
   <Folder Name="/OLD/" />
   <Folder Name="/OLD/Lecture1 - data types/">
     <Project Path="Lecture1/Lecture1.csproj" />
