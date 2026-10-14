@@ -5,6 +5,12 @@
     <Project Path="Step.Infrastructure/Step.Infrastructure.csproj" Id="09b8c743-d196-472c-b552-c5a4ecfa5715" />
     <Project Path="Step.UI/Step.UI.csproj" Id="0ffd6c1d-0bf6-49c8-ba68-ae48a9b8d6c0" />
   </Folder>
+  <Folder Name="/ADO.NET2/">
+    <Project Path="Aplication/Aplication.csproj" Id="d9e2f89d-d202-40d5-a81e-26832e3427f5" />
+    <Project Path="Domain/Domain.csproj" Id="35daadde-4e34-40a6-bea5-d350f750dcc4" />
+    <Project Path="Infrastructure/Infrastructure.csproj" Id="d87d0ac7-fb55-477d-988e-1818aecf58ec" />
+    <Project Path="UI/UI.csproj" Id="0d117b42-6b10-419d-9d28-4d6bff037b91" />
+  </Folder>
   <Folder Name="/OLD/" />
   <Folder Name="/OLD/Lecture1 - data types/">
     <Project Path="Lecture1/Lecture1.csproj" />
