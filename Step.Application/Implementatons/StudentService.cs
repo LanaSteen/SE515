@@ -29,5 +29,11 @@ namespace Step.Application.Implementatons
 		{
 			return _studentRepository.GetById(id);
 		}
+
+
+		public void AddStudent(Student student)
+		{
+			_studentRepository.Add(student);
+		}
 	}
 }

@@ -36,6 +36,30 @@ namespace Step.UI
 			int id = int.Parse(Console.ReadLine());
 			Console.WriteLine(studetnService.GetStudentById(id));
 
+		//	public string FirstName { get; set; }
+		//public string LastName { get; set; }
+		//public int Age { get; set; }
+		//public string Email { get; set; }
+		//public bool StatusIsActive { get; set; }
+		//public int FacultyId { get; set; }
+
+		Student student = new Student();
+			Console.WriteLine("Enter name of student");
+			student.FirstName = Console.ReadLine();
+			Console.WriteLine("Enter last name of student");
+			student.LastName = Console.ReadLine();
+			Console.WriteLine("Enter age of student");
+			student.Age = int.Parse(Console.ReadLine());
+			Console.WriteLine("Enter email of student");
+			student.Email = Console.ReadLine();
+			//Console.WriteLine("Enter status of student");
+			//student.StatusIsActive = bool.Parse(Console.ReadLine());
+			Console.WriteLine("Enter faculty id of student ");
+			student.FacultyId = int.Parse(Console.ReadLine());
+
+			studetnService.AddStudent(student);
+
+
 
 		}
 	}
