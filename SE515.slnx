@@ -11,6 +11,9 @@
     <Project Path="Infrastructure/Infrastructure.csproj" Id="d87d0ac7-fb55-477d-988e-1818aecf58ec" />
     <Project Path="UI/UI.csproj" Id="0d117b42-6b10-419d-9d28-4d6bff037b91" />
   </Folder>
+  <Folder Name="/EFcore/">
+    <Project Path="HotelApp/HotelApp.csproj" Id="ac5e7ba2-eeb0-4a03-8ce6-b655fe99bae2" />
+  </Folder>
   <Folder Name="/OLD/" />
   <Folder Name="/OLD/Lecture1 - data types/">
     <Project Path="Lecture1/Lecture1.csproj" />
