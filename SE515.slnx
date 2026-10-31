@@ -14,6 +14,12 @@
   <Folder Name="/EFcore/">
     <Project Path="HotelApp/HotelApp.csproj" Id="ac5e7ba2-eeb0-4a03-8ce6-b655fe99bae2" />
   </Folder>
+  <Folder Name="/FItZoneApp/">
+    <Project Path="FitZone.Application/FitZone.Application.csproj" Id="d68fcc4b-d00a-4426-8db7-6ee04bca88c5" />
+    <Project Path="FitZone.Domain/FitZone.Domain.csproj" Id="c9dc4118-6d0b-42fe-a9b3-a67dd54c0e23" />
+    <Project Path="FitZone.Infrastructure/FitZone.Infrastructure.csproj" Id="1519e4c1-9042-48e1-9f03-998d0d8501a5" />
+    <Project Path="FitZone.UI/FitZone.UI.csproj" Id="1c4b1c26-bec3-4f99-9600-1aef56520f03" />
+  </Folder>
   <Folder Name="/OLD/" />
   <Folder Name="/OLD/Lecture1 - data types/">
     <Project Path="Lecture1/Lecture1.csproj" />
