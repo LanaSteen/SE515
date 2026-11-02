@@ -8,13 +8,22 @@ namespace FitZone.Infrastructure.Data
 {
 	public class FitZoneDbContext : DbContext
 	{
+		public FitZoneDbContext(DbContextOptions<FitZoneDbContext> 
+			options) : base(options)
+		{
+		}
+
+
+		public FitZoneDbContext() : base() { }
+
 
 		public DbSet<Member> Members { get; set; }
+		public DbSet<Trainer> Trainers { get; set; }
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			base.OnConfiguring(optionsBuilder);
-			optionsBuilder.UseSqlServer(@"Server=LAPTOP-HE9JLDVE;Database=HospitalAppDb; Integrated Security=True; Trusted_Connection=True; TrustServerCertificate=True;");
+			optionsBuilder.UseSqlServer(@"Server=LAPTOP-HE9JLDVE;Database=FitZoneAppDb; Integrated Security=True; Trusted_Connection=True; TrustServerCertificate=True;");
 		}
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)

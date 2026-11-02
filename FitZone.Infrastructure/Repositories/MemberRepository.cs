@@ -20,13 +20,13 @@ namespace FitZone.Infrastructure.Repositories
 		public void AddMember(Member member)
 		{
 			_context.Members.Add(member);
-			_context.SaveChanges();
+			//_context.SaveChanges();
 		}
 
 		public void DeleteMember(Member member)
 		{
 			_context.Members.Remove(member);
-			_context.SaveChanges();
+			//_context.SaveChanges();
 		}
 		public List<Member> GetAllMembers()
 		{
@@ -44,7 +44,7 @@ namespace FitZone.Infrastructure.Repositories
 			memberOld.FirstName = member.FirstName;
 			memberOld.LastName = member.LastName;
 			memberOld.MembershipTypeId = member.MembershipTypeId;
-			_context.SaveChanges();
+			//_context.SaveChanges();
 		}
 	}
 }

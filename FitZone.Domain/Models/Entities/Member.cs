@@ -15,5 +15,9 @@ namespace FitZone.Domain.Models.Entities
 		
 		public int MembershipTypeId { get; set; }
 
+		public int TrainerId { get; set; } = -1; // fk
+
+		public Trainer Trainer { get; set; } = null!; // navigation property
+
 	}
 }
