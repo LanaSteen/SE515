@@ -37,6 +37,9 @@ namespace FitZone.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("MembershipType")
+                        .HasColumnType("int");
+
                     b.Property<int>("MembershipTypeId")
                         .HasColumnType("int");
 

@@ -2,6 +2,7 @@
 using FitZone.Application.Services.Interfaces;
 using FitZone.Domain.Interfaces;
 using FitZone.Domain.Models.DTOs.MembersDTOs;
+using FitZone.Domain.Models.Enums;
 using FitZone.Infrastructure.Data;
 using FitZone.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -49,9 +50,11 @@ namespace FitZone.UI
 
 			var newMember = new CreateMemberDTO
 			{
-				FirstName = "Jane",
+				FirstName = "David",
 				LastName = "Smith",
-				MembershipTypeId = 2
+				MembershipTypeId = 3,
+				TrainerId = 1,
+				MembershipType = MembershipType.Premium
 			};
 
 

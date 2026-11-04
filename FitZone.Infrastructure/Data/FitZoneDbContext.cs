@@ -29,6 +29,16 @@ namespace FitZone.Infrastructure.Data
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);
+
+			//modelBuilder.Entity<Member>(x =>
+			//{
+			
+
+			//	x.Property(m => m.MembershipType)
+			//	.HasConversion<string>();
+			//	x.HasCheckConstraint( "CK_Member_TrainerId", "TrainerId > 0" );
+			//});
+				
 		}
 	}
 }
