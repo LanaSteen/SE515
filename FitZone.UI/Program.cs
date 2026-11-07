@@ -33,7 +33,7 @@ namespace FitZone.UI
 			services.AddScoped<IMemberRepository, MemberRepository>();
 			services.AddScoped<IMemberService, MemberService>();
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
-
+			services.AddScoped<ITrainerRepository, TrainerRepository>();
 
 
 			services.AddAutoMapper(cfg =>

@@ -24,5 +24,3 @@ namespace FitZone.Domain.Models.Entities
 	}
 }
 
-
-

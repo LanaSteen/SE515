@@ -102,6 +102,7 @@
   <Project Path="EFCore2/EFCore2.csproj" Id="424f9fdc-a7ef-4eef-92ea-c2c6c6710f00" />
   <Project Path="HospitallApp/HospitallApp.csproj" Id="3c2cb004-df54-410d-aafb-5bc58c2bacd5" />
   <Project Path="Library/Library.csproj" Id="f77868f7-eaad-4b5e-8158-4a84104835f2" />
+  <Project Path="mariam/mariam.csproj" Id="b48f91b9-c644-447f-a33f-80821bd51b8c" />
   <Project Path="Repeat/Repeat.csproj" Id="0a0fc611-a6fe-4910-9c03-125ddd910d4a" />
   <Project Path="RepeatGeneric/RepeatGeneric.csproj" Id="3e9255cf-4a54-4e3e-ae6b-2cb80e2434d6" />
   <Project Path="Thread-Task/Thread-Task.csproj" Id="f43b1568-2bb6-494c-820b-d960996f67d7" />
