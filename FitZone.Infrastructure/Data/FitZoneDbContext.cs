@@ -14,7 +14,7 @@ namespace FitZone.Infrastructure.Data
 		}
 
 
-		public FitZoneDbContext() : base() { }
+		public FitZoneDbContext() { }
 
 
 		public DbSet<Member> Members { get; set; }
@@ -22,8 +22,11 @@ namespace FitZone.Infrastructure.Data
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			base.OnConfiguring(optionsBuilder);
-			optionsBuilder.UseSqlServer(@"Server=LAPTOP-HE9JLDVE;Database=FitZoneAppDb; Integrated Security=True; Trusted_Connection=True; TrustServerCertificate=True;");
+
+			if(!optionsBuilder.IsConfigured)
+			{
+				optionsBuilder.UseSqlServer(@"Server=LAPTOP-HE9JLDVE;Database=FitZoneAppDb; Integrated Security=True; Trusted_Connection=True; TrustServerCertificate=True;");
+			}
 		}
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
