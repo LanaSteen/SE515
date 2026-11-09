@@ -1,6 +1,7 @@
 ﻿using FitZone.Domain.Interfaces;
 using FitZone.Domain.Models.Entities;
 using FitZone.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -47,6 +48,13 @@ namespace FitZone.Infrastructure.Repositories
 			trainerOld.Surname = trainer.Surname;
 			
 			//_context.SaveChanges();
+		}
+
+
+		public List<Trainer> GetAllTrainersWithMembers()
+		{
+			return _context.Trainers
+				.Include(t => t.Members).ToList();
 		}
 	}
 }

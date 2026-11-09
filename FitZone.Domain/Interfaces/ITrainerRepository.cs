@@ -15,6 +15,8 @@ namespace FitZone.Domain.Interfaces
 		Trainer GetTrainerById(int Id);
 		void UpdateTrainer(Trainer trainer);
 
+		List<Trainer> GetAllTrainersWithMembers();
+
 
 
 

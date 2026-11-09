@@ -17,6 +17,8 @@ namespace FitZone.Application.Profiles
 			CreateMap<Trainer, UpdateTrainerDTO>();
 			CreateMap<UpdateTrainerDTO, Trainer>();
 			CreateMap<Trainer, CreateTrainerDTO	>();
+
+			CreateMap<Trainer, TrainerWithMembersDTO>().ReverseMap();
 		}
 
 	}
