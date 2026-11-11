@@ -46,9 +46,9 @@ namespace FitZone.Application.Services.Implementations
 
 		public void	DeleteMember(int Id)
 		{
-			if(Id == 0)
+			if(Id <=0)
 			{
-				throw new ArgumentException("Id cannot be 0");
+				throw new ArgumentException("Id cannot be less than or equal to 0");
 			}
 			Member memb = _memberRepository.GetMemberById(Id);
 			if (memb == null)

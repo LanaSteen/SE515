@@ -15,7 +15,7 @@ namespace FitZone.Tests
 		private FitZoneDbContext CreateContext()
 		{
 			var options = new DbContextOptionsBuilder<FitZoneDbContext>()
-			.UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+			.UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()) // DDFGHFGD4545F4F5
 			.Options;
 			return new FitZoneDbContext(options);
 

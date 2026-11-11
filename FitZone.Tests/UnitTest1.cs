@@ -17,25 +17,26 @@
 			//A   Assert
 			Assert.Equal(15, sum);
 
-		}
-
-
-		[Fact]
-		public void Test2()
-		{
-			//A   Arrange
-			int a = 5;
-			int b = 5;
-
-
-			//A   Act
-			int sum = a + b;
-
-
-			//A   Assert
-			Assert.Equal(10, sum);
 
 		}
+
+
+		//[Fact]
+		//public void Test2()
+		//{
+		//	//A   Arrange
+		//	int a = 5;
+		//	int b = 5;
+
+
+		//	//A   Act
+		//	int sum = a + b;
+
+
+		//	//A   Assert
+		//	Assert.Equal(10, sum);
+
+		//}
 
 	}
 }
