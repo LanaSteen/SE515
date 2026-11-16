@@ -26,7 +26,7 @@ namespace FitZone.UI
 	
 			services.AddDbContext<FitZoneDbContext>(options =>
 			options.UseSqlServer(
-				"Server=.;Database=FitZoneDB;Trusted_Connection=True;TrustServerCertificate=True;"
+				"Server=LAPTOP-HE9JLDVE;Database=FitZoneAppDb;Trusted_Connection=True;TrustServerCertificate=True;"
 			));
 
 

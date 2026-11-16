@@ -20,6 +20,7 @@
     <Project Path="FitZone.Infrastructure/FitZone.Infrastructure.csproj" Id="1519e4c1-9042-48e1-9f03-998d0d8501a5" />
     <Project Path="FitZone.Tests/FitZone.Tests.csproj" Id="208c372b-c4ba-4314-9372-1b20fe0aac85" />
     <Project Path="FitZone.UI/FitZone.UI.csproj" Id="1c4b1c26-bec3-4f99-9600-1aef56520f03" />
+    <Project Path="Fitzone.Web/Fitzone.Web.csproj" Id="a089bbdb-d6f3-4f50-b1e5-1cf6a7e1c9f2" />
   </Folder>
   <Folder Name="/OLD/" />
   <Folder Name="/OLD/Lecture1 - data types/">
