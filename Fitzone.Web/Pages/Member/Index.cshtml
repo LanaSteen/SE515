@@ -6,10 +6,20 @@
     
 <h2>Members</h2>
 
+
+<a asp-page="Create" class="btn accept-policy">Add Member</a>
+
 <ul>
     @foreach (var member in Model.Members)
     {
-        <li>@member.FirstName @member.LastName - @member.TrainerId</li>
+        <li>@member.FirstName @member.LastName - @member.TrainerId
+            
+          <a asp-page="Details" asp-route-id="@member.Id" class="btn btn-primary">Details</a>
+
+
+
+        </li>
+       
        
     }
 </ul>

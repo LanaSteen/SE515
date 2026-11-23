@@ -1,0 +1,20 @@
+﻿@page "{id:int}"
+@model Fitzone.Web.Pages.Member.DetailsModel
+@{
+    ViewData["Title"] = "Member Details";
+}
+
+<h2 class="text-primary">@ViewData["Title"]</h2>
+
+
+    <p><strong>First Name:</strong> @Model.Member.FirstName</p>
+    <p><strong>Last Name:</strong> @Model.Member.LastName</p>
+    <p><strong>Trainer:</strong> @Model.Member.TrainerId</p>
+    <p><strong>Membership Type:</strong> @Model.Member.MembershipType</p>
+
+
+
+
+
+
+  <a class="btn btn-secondary" asp-page="Index" asp-route-id="@Model.Member.Id">Back to List</a>

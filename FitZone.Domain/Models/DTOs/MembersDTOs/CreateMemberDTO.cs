@@ -12,6 +12,7 @@ namespace FitZone.Domain.Models.DTOs.MembersDTOs
 		[Required]
 		public string FirstName { get; set; }
 		[Required]
+		[MinLength(5)]
 		public string LastName { get; set; }
 
 		public int MembershipTypeId { get; set; }

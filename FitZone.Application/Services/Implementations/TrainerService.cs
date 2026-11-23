@@ -10,7 +10,7 @@ using System.Text;
 
 namespace FitZone.Application.Services.Implementations
 {
-	public class TrainerService
+	public class TrainerService   : ITrainerService
 	{
 
 
