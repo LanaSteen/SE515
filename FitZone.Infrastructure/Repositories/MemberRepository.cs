@@ -44,6 +44,8 @@ namespace FitZone.Infrastructure.Repositories
 			memberOld.FirstName = member.FirstName;
 			memberOld.LastName = member.LastName;
 			memberOld.MembershipTypeId = member.MembershipTypeId;
+			memberOld.MembershipType = member.MembershipType;
+			memberOld.TrainerId = member.TrainerId;
 			//_context.SaveChanges();
 		}
 	}

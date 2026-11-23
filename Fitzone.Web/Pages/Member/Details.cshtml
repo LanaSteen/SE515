@@ -1,20 +1,100 @@
-﻿@page "{id:int}"
+﻿
+@page "{id:int}"
 @model Fitzone.Web.Pages.Member.DetailsModel
 @{
     ViewData["Title"] = "Member Details";
 }
 
-<h2 class="text-primary">@ViewData["Title"]</h2>
+<div class="container py-5">
 
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
 
-    <p><strong>First Name:</strong> @Model.Member.FirstName</p>
-    <p><strong>Last Name:</strong> @Model.Member.LastName</p>
-    <p><strong>Trainer:</strong> @Model.Member.TrainerId</p>
-    <p><strong>Membership Type:</strong> @Model.Member.MembershipType</p>
+            <div class="card border-0 shadow-lg rounded-4">
 
+                <div class="card-header bg-primary text-white text-center py-4 rounded-top-4">
+                    <div class="mb-2">
+                        <i class="bi bi-person-circle display-3"></i>
+                    </div>
+                    <h3 class="mb-1">Member Profile</h3>
+                    <p class="mb-0 opacity-75">Member Information</p>
+                </div>
 
+                <div class="card-body p-4">
 
+                    <div class="text-center mb-4">
+                        <h4 class="fw-bold text-dark">
+                            @Model.Member.FirstName @Model.Member.LastName
+                        </h4>
+                        <span class="badge bg-success rounded-pill px-3 py-2">
+                            @Model.Member.MembershipType
+                        </span>
+                    </div>
 
+                    <hr />
 
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-5 text-muted">
+                            <i class="bi bi-person me-2"></i>First Name
+                        </div>
+                        <div class="col-7 fw-semibold text-end">
+                            @Model.Member.FirstName
+                        </div>
+                    </div>
 
-  <a class="btn btn-secondary" asp-page="Index" asp-route-id="@Model.Member.Id">Back to List</a>
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-5 text-muted">
+                            <i class="bi bi-person-vcard me-2"></i>Last Name
+                        </div>
+                        <div class="col-7 fw-semibold text-end">
+                            @Model.Member.LastName
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-5 text-muted">
+                            <i class="bi bi-person-badge me-2"></i>Trainer ID
+                        </div>
+                        <div class="col-7 fw-semibold text-end">
+                            @Model.Member.TrainerId
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-5 text-muted">
+                            <i class="bi bi-award me-2"></i>Membership
+                        </div>
+                        <div class="col-7 text-end">
+                            <span class="badge bg-primary px-3 py-2">
+                                @Model.Member.MembershipType
+                            </span>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="d-flex justify-content-between mt-4">
+                        <a asp-page="Index"
+                           class="btn btn-outline-secondary px-4">
+                            <i class="bi bi-arrow-left me-2"></i>
+                            Back to List
+                        </a>
+
+                        <a asp-page="Edit"
+                           asp-route-id="@Model.Member.Id"
+                           class="btn btn-primary px-4">
+                            <i class="bi bi-pencil-square me-2"></i>
+                            Edit Member
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <p class="text-center text-muted small mt-3">
+                FitZone Management System
+            </p>
+
+        </div>
+    </div>
+</div>

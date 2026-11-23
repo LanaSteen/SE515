@@ -3,8 +3,13 @@
 @{
     ViewData["Title"] = "Members";
 }
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/member.css" />
+}
+
     
-<h2>Members</h2>
+<h2 class="main-title">Members</h2>
 
 
 <a asp-page="Create" class="btn accept-policy">Add Member</a>
@@ -16,10 +21,11 @@
             
           <a asp-page="Details" asp-route-id="@member.Id" class="btn btn-primary">Details</a>
 
-
-
+            <a asp-page="Edit" asp-route-id="@member.Id" class="btn btn-warning">Edit</a>
+            <a asp-page="Delete" asp-route-id="@member.Id" class="btn btn-danger">Delete</a>
         </li>
        
        
     }
 </ul>
+

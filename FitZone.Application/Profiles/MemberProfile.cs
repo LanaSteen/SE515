@@ -17,6 +17,8 @@ namespace FitZone.Application.Profiles
 			CreateMap<Member, CreateMemberDTO>();
 			CreateMap<UpdateMemberDTO, Member>();
 			CreateMap<Member, UpdateMemberDTO>();
+			CreateMap<MemberDTO, UpdateMemberDTO>();
+			CreateMap<UpdateMemberDTO, MemberDTO>();
 
 		}
 	}

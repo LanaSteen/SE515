@@ -1,0 +1,16 @@
+﻿@page "{id:int}"
+@model Fitzone.Web.Pages.Member.DeleteModel
+@{
+  ViewData["Title"] = "Delete Member";
+}
+
+
+<h2>@ViewData["Title"]</h2>
+
+
+<form method="post">
+    <input type="hidden" asp-for="Member.Id" />
+    <p>Are you sure you want to delete @Model.Member.FirstName @Model.Member.LastName?</p>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form>
